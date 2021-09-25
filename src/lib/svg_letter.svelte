@@ -1,13 +1,56 @@
 <script>
     export let letter;
+
+    let svgEl
+
+    var distancePerPoint = 2;
+    var drawFPS          = 60;
+
+    export function animate(){
+        console.log('animating letter')
+
+        let svg = svgEl.getSVGDocument();
+        var paths = svg.querySelectorAll('path');//, length, timer;
+        console.log(paths)
+
+        var pathCount = paths.length
+        var pathLengths = Array(pathCount)
+        var lengths = Array(pathCount)
+        var timers = Array(pathCount)
+
+        let timeout = 0;
+
+        function increaseLength(j){
+            lengths[j] += distancePerPoint;
+            paths[j].style.strokeDasharray = [lengths[j],pathLengths[j]].join(' ');
+            if (lengths[j] >= pathLengths[j]) {
+                clearInterval(timers[j]);
+            }
+        }
+
+        for (let i = 0; i < paths.length; i++) {
+            lengths[i] = 0
+            pathLengths[i] = paths[i].getTotalLength();
+
+            paths[i].style.visibility = "hidden"
+
+            setTimeout(() => {
+                timers[i] = setInterval(() => {increaseLength(i)}, 1000/drawFPS);
+                setTimeout(() => {paths[i].style.visibility = "visible"}, 1000/drawFPS);
+            }, timeout);
+
+            timeout += (1000/drawFPS) * (pathLengths[i]/distancePerPoint)
+        }
+    }
 </script>
 
-<object type="image/svg+xml" data="/alphabet/{letter}_lowercase.svg" class="letter-svg" title="letter">
+<object bind:this={svgEl} type="image/svg+xml" data="/alphabet/lowercase/{letter}.svg" class="letter-svg" title="letter">
     {letter}
 </object>
 
 <style>
     .letter-svg {
         height: 100%;
+        z-index: 100;
     }
 </style>

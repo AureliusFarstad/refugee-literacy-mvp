@@ -1,28 +1,48 @@
 <script>
     import SvgLetter from "./svg_letter.svelte";
+
     export let letter;
+
+    let svgLetterEl
 </script>
 
 <div class="card">
+    <div on:click={svgLetterEl.animate()} class="animate">
+        <img class="illustration" src="/images/icons/writing_hand.svg" alt="write">
+    </div>
     <div class="outerlines">
-        <SvgLetter {letter}></SvgLetter>
+        <div class="svg">
+            <SvgLetter {letter} bind:this={svgLetterEl}></SvgLetter>
+        </div>
         <div class="innerlines"></div>
     </div>
 </div>
 
 <style>
-.svg {
-    display: block;
+.animate {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: blueviolet;
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 3;
+}
 
-    z-index: 2;
+.svg {
+    position: relative;
     height: 100%;
-    width: auto;
-    margin: 0 auto;
+    z-index: 300;
 }
 
 .card {
     height: 66vw;
     position: relative;
+    z-index: 1;
 
     display: flex;
     align-items: center;
@@ -47,6 +67,8 @@
     border-radius: 0px;
     background-color: transparent;
     cursor: auto;
+    z-index: 2;
+
 }
 
 .innerlines {
@@ -59,6 +81,16 @@
     padding-bottom: 0px;
     border-top: 2.5px solid #9173ff;
     border-bottom: 2.5px solid #9173ff;
+
+    z-index: 2;
+}
+
+.illustration{
+    /* display: block; */
+    /* position: absolute; */
+    height: 110%;
+    width: auto;
+    transform: translate(8%, 5%);
 }
 
 </style>

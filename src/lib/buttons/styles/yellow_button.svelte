@@ -51,5 +51,5 @@
     transition: all 0.6s ease-out;
     /* transition: all 2s ease-in-out 0s 1 forward both; */
     /*  border 0.5s ease-in-out 1s 1 forward both; */
-    }
+}
 </style>

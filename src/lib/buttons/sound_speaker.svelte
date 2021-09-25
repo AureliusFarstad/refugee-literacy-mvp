@@ -1,7 +1,7 @@
 <script>
-// import { audio_paused } from 'src/stores/audio';
     import Green from './styles/green_button.svelte';
 
+    export let noise;
     export let letter;
 
     let audio;
@@ -9,11 +9,9 @@
     let svg;
 
     function pressSound() {
-        console.log("yessir")
         if (active === true) {return}
         active = true
-        svg.setAttribute("fill", "red")
-        let source = "audio/letter/" + letter.toString() + "_sound.mp4"
+        let source = `/alphabet/${noise}/${letter}.mp4`
         console.log(source)
         audio.src = source
         audio.play()
@@ -28,8 +26,11 @@
 </script>
 <Green {active}>
     <div class="center" class:selected="{active}" on:click={pressSound}>
-        <object on:click={pressSound} bind:this={svg} class="illustration" class:selected="{active}" data="/images/speaker2.svg" type="image/svg+xml" title="speaker"></object> 
-        <!-- <img bind:this={svg} class:selected="{active}" class="illustration" src="/images/speaker2.svg" alt="ear"> -->
+        {#if noise == "sound"}
+            <img class="ear" src="/images/icons/ear-with-sparks-below.svg" alt="sound">
+        {:else if noise == "name"}
+            <img class="nametag" src="/images/icons/name-tag.svg" alt="name">
+        {/if}
     </div>
 </Green>
 
@@ -48,16 +49,19 @@
     align-items: center; 
     justify-content: center;
 }
-.illustration{
+.nametag {
     display: block;
-    position: absolute;
-    height: 90%;
+    position: absolute;   
+    height: 75%;
     width: auto;
-    transform: translate(8%, 5%);
+    transform: translate(0%, -4%);
 }
-.selected g path{
-  fill:Yellow;
-  stroke: Yellow;
+.ear {
+    display: block;
+    position: absolute;   
+    height: 75%;
+    width: auto;
+    transform: translate(0%, -2%);
 }
 
 </style>

@@ -20,14 +20,12 @@
     width: 100%;
     height: 100%;
 
-    box-shadow: 0px 8px 0px 0px #032436; /* #D7EAC3; */
+    box-shadow: 0px 8px 0px 0px rgb(16, 100, 20); /* #D7EAC3; */
 
     background: linear-gradient(180deg, rgb(42, 190, 86) 0%, rgb(50, 223, 102));
 
     border:4px solid #ffffff;
-    border-radius: 6px;
-
-    font-family: 'Patrick Hand', cursive;
+    border-radius: 50%;
 
     text-indent:0;
     /* border:1px solid #3B7A57; */
@@ -46,7 +44,5 @@
     box-shadow: 0px 2px 0px 0px #60a83d;
     border:4px solid #fffd72;
     transition: all 0.6s ease-out;
-    /* transition: all 2s ease-in-out 0s 1 forward both; */
-    /*  border 0.5s ease-in-out 1s 1 forward both; */
-    }
+}
 </style>

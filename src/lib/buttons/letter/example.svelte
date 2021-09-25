@@ -8,7 +8,7 @@
     function pressSound() {
         if (active === true) {return}
         active = true
-        let source = "audio/letter/" + letter.toString() + "_example.mp4"
+        let source = "alphabet/sound/" + letter.toString() + ".mp4"
         console.log(source)
         audio.src = source
         audio.play()

@@ -19,22 +19,24 @@
 <style>
 
 .left-to-right {
+    display: inline-flex;
     padding: 2px 0px;
 }
 .text {
-    display: inline-block;
     color: #000004;
     font-size: 32px;
     font-family: 'Patrick Hand', cursive;
     text-align: center;
-    line-height: 50px;
+    line-height: 36px;
+    white-space: pre-wrap;
 }
 .spacer {
-    display: inline-block;
+    display: inline-flex;
     width: 5px;
 }
 .sound-button {
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 </style>

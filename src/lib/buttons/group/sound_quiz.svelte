@@ -1,18 +1,13 @@
 <script>
-	import White from './styles/white_button.svelte';
-
-    export let letter;
+	import White from '../styles/white_button.svelte';
 </script>
 <White>
     <div class="grid">
         <div class="illustration-1">
-            <img class="illustration" src="/images/whisper.svg" alt="whisper">
+            <img class="ear" src="/images/icons/ear-with-sparks-below.svg" alt="sound">
         </div>
         <div class="illustration-2">
-            <img class="illustration" src="/images/listen.svg" alt="listen">
-        </div>
-        <div class="illustration-3">
-            <img class="illustration" src="/images/pick.svg" alt="pick">
+            <img class="pick" src="/images/icons/man-picking-from-cards.svg" alt="pick">
         </div>
     </div>
 </White>
@@ -23,12 +18,19 @@
     width: 100%;
     text-align: center;
 }
-.illustration {
+.ear {
+    display: block;
+    position: absolute;   
+    height: 75%;
+    width: auto;
+    transform: translate(50%, 15%);
+}
+.pick {
     display: block;
     position: absolute;
-    height: 100%;
+    height: 95%;
     width: auto;
-    transform: translate(16%, 9%);
+    transform: translate(14%, 11%);
 }
 /* .illustration {
     display: block;
@@ -40,9 +42,10 @@
     transform: translate(-50%, -50%);
 } */
 .grid {
+    width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr; 
 }
 </style>

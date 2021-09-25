@@ -1,45 +1,38 @@
 <script>
-    import Yellow from './styles/yellow_button.svelte';
+    import YellowGuessingButton from "./styles/yellow_guessing_button.svelte";
 
-    export let pressed;
+    export let guessed_letter;
+    export let correct_letter;
     export let letter;
 
-    let active;
-    $: if (letter === pressed) {
-        active = true
-    } 
-    $: if (letter !== pressed) {
-        active = false
-    }
+    let active_green;
+    let active_red;
+    let green;
 
-    let audio;
-    let audio_source = "audio/letter/" + letter.toString() + "_sound.mp4"
-
-    function pressSound() {
-        console.log(audio_source)
-        audio.src = audio_source
-        audio.play()
-    }
-
-    function audioEnded() {
-        console.log("audio finished")
+    $: if (guessed_letter != "") {
+        if (letter == guessed_letter && letter == correct_letter) {
+            active_green = true;
+        } else if (letter == guessed_letter && letter != correct_letter) {
+            active_red = true;
+        } else if (letter != guessed_letter && letter == correct_letter) {
+            green = true;    
+        }
+    } else {
+        active_green = false;
+        active_red = false;
+        green = false;
     }
 </script>
-<Yellow {active}>
-    <div class="center" on:click={pressSound}>
+<YellowGuessingButton {active_green} {active_red} {green}>
+    <div class="center">
         {letter}
     </div>
-</Yellow>
+</YellowGuessingButton>
 
-<audio
-  style="display:none;"
-  bind:this="{audio}"
-  on:ended="{audioEnded}"
-  volume="0.8"
-  controls
-><track kind="captions" /></audio>
 <style>
 .center {
+    width: 100%;
+    height: 100%;
     display: flex; 
     align-items: center; 
     justify-content: center;

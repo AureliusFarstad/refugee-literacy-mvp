@@ -1,6 +1,6 @@
 <script>
     export let letter;
-    import { t, locale, locales } from "$lib/stores/i18n";
+    import { t, en, locale, locales } from "$lib/stores/i18n";
     import Yellow from '../styles/yellow_button.svelte';
     let audio;
     let active;
@@ -8,7 +8,7 @@
     function pressSound() {
         if (active === true) {return}
         active = true
-        let source = "audio/letter/" + letter.toString() + "_name.mp4"
+        let source = "/alphabet/name/" + letter.toString() + ".mp4"
         console.log(source)
         audio.src = source
         audio.play()
@@ -21,8 +21,9 @@
 
 <Yellow {active}>
     <div class="grid" on:click={pressSound}>
-        <div class="text">{$t("button.name")}</div>
-        <div class="picture"><img class="illustration" src="/images/nametag.svg" alt="ear"></div>
+        <div class="english">{en("button.name")}</div>
+        <div class="picture"><img class="illustration" src="/images/icons/name-tag.svg" alt="ear"></div>
+        <div class="mothertongue">{$t("button.name")}</div>
     </div>
 </Yellow>
 
@@ -30,7 +31,7 @@
   style="display:none;"
   bind:this="{audio}"
   on:ended="{audioEnded}"
-  volume="0.8"
+  volume="1"
   controls
 ><track kind="captions" /></audio>
 
@@ -50,6 +51,6 @@
     height: 100%;
     display: grid;
     place-items: center;
-    grid-template-columns: 2fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
 }
 </style>

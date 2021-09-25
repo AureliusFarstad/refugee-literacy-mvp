@@ -1,38 +1,33 @@
 <script>
-import White from '$lib/buttons/styles/white_button.svelte'
+import { locale } from "$lib/stores/i18n";
+import { fade } from 'svelte/transition';
+
+$locale="";
+
 import BigLanguageToggle from '$lib/language-toggle/big.svelte'
 import EnglishText from '$lib/english_text.svelte';
 import LearnerText from '$lib/learner_text.svelte';
+import White from "$lib/buttons/styles/white_button.svelte";
 </script>
 
 <body>
     <div class="outer-grid">
-        <div class="speech-bubble-world-div"> 
-            <img class="speech-bubble-world-svg" src="/images/icons/world_inside_speech_bubble.svg" alt="pick language">
+        <div class="intro-language"> 
+            <img class="finger" src="/images/icons/finger.svg" alt="press the button">
+            <EnglishText key={"home.pick_your_language"}></EnglishText>
         </div>
         <div class="pick-language-select">
             <BigLanguageToggle />
         </div>
-        <div class="learn-alphabet">
-            <div>
-            <EnglishText key={"home.learn_the_alphabet"}></EnglishText>
-            </div>
-            <div>
-            <LearnerText key={"home.learn_the_alphabet"}></LearnerText>
-            </div>
+    {#if $locale}
+        <div in:fade="{{duration: 1200}}" class="welcome">
+            <EnglishText key={"home.welcome"}></EnglishText>
+            <LearnerText key={"home.welcome"}></LearnerText>
         </div>
-        <div class="learn-alphabet-learner">
-        </div>
-        <a class="group-1" href="group/1">
-            <White>s a t p i n</White>
+        <a href="/browse" in:fade="{{duration: 1200}}" class="forward">
+            <White><div class="illustration"><img class="arrow" src="/images/icons/arrow-forward.svg" alt="arrow"></div></White>
         </a>
-        <a class="group-2" href="group/2">
-            <White>c k e h r m d</White>
-        </a>
-        <a class="group-3" href="group/3">
-            <White>g o u l f b</White>
-        </a>
-
+    {/if}
     </div>
 </body>
 
@@ -42,48 +37,67 @@ import LearnerText from '$lib/learner_text.svelte';
     place-items: center;
     padding: 0px 15px;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 70px auto auto 70px 70px 70px auto;
-    grid-gap: 22px;
+    grid-template-rows: 90px 40px auto 130px 70px;
+    grid-gap: 16px;
+    padding-bottom: 20px;
 }
 
-.speech-bubble-world-div {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    height: 100%;
-    width: 100%;
+.intro-language {
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    width: auto;
     text-align: center;
 }
-.speech-bubble-world-svg {
-    display: block;
-    height: 80px;
-    width: auto;
-    transform: translate(50%, 10px);
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.finger {
+    animation: MoveUpDown 1.5s linear infinite;
+    position: absolute;
+    width: 50px;
+    right: -3px;
+    top: -50px;
 }
 
 .pick-language-select {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
-}
-
-.learn-alphabet {
-    width: auto;
     grid-row: 3 / 4;
     grid-column: 1 / 4;
 }
 
-.group-1 {
-    width: 90%;
+.welcome {
+    /* display: inline-block; */
+    /* width: auto; */
     grid-row: 4 / 5;
     grid-column: 1 / 4;
 }
-.group-2 {
-    width: 90%;
+
+.forward {
     grid-row: 5 / 6;
     grid-column: 1 / 4;
+    width: auto;
+    height: 100%;
 }
-.group-3 {
-    width: 90%;
-    grid-row: 6 / 7;
-    grid-column: 1 / 4;
+
+.illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 2;
+}
+
+.arrow {
+    display: block;
+    /* position: absolute;    */
+    height: 100%;
+    transform: translate(0%, 12%);
 }
 </style>

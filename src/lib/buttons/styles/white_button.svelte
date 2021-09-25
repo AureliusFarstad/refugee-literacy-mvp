@@ -9,8 +9,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 .btn {
-    display: flex;
+    display: flex !important;
     align-items: center;
+    justify-content: center;
 
     position: relative;
     top: 0px;
@@ -31,8 +32,6 @@
 
     font-family: 'Patrick Hand', cursive;
 
-    text-indent:0;
-    /* border:1px solid #3B7A57; */
     display:inline-block;
     color:#000004;
     
