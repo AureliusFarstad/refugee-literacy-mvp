@@ -27,7 +27,7 @@
     border:4px solid #fff09d;
     border-radius: 6px;
 
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick Hand';
 
     text-indent:0;
     /* border:1px solid #3B7A57; */

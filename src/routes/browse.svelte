@@ -15,10 +15,10 @@
     </a>
     <div class="learn-alphabet">
         <div>
-        <EnglishText key={"home.learn_the_alphabet"}></EnglishText>
+        <EnglishText key={"alphabet"}></EnglishText>
         </div>
         <div>
-        <LearnerText key={"home.learn_the_alphabet"}></LearnerText>
+        <LearnerText key={"alphabet"}></LearnerText>
         </div>
     </div>
 </div>

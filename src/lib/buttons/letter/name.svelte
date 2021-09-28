@@ -21,9 +21,9 @@
 
 <Yellow {active}>
     <div class="grid" on:click={pressSound}>
-        <div class="english">{en("button.name")}</div>
+        <div class="english">{en("name")}</div>
         <div class="picture"><img class="illustration" src="/images/icons/name-tag.svg" alt="ear"></div>
-        <div class="mothertongue">{$t("button.name")}</div>
+        <div class="mothertongue">{$t("name")}</div>
     </div>
 </Yellow>
 

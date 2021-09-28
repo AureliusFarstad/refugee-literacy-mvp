@@ -5,15 +5,13 @@
 
     export let sound = true;
     export let key = "";
-    console.log(key)
-    console.log(en(key))
 </script>
 
 {#if sound}
 <div class="left-to-right">
     <div class="text">{en(key)}</div>
     <div class="spacer"></div>
-    <div class="sound-button"><PersonSpeaking></PersonSpeaking></div>
+    <div class="sound-button"><PersonSpeaking {key} eng={true}></PersonSpeaking></div>
 </div>
 {/if}
 <style>
@@ -21,18 +19,19 @@
 .left-to-right {
     display: inline-flex;
     padding: 2px 0px;
+    margin-right: 0px;
 }
 .text {
     color: #000004;
     font-size: 32px;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick Hand';
     text-align: center;
     line-height: 36px;
     white-space: pre-wrap;
 }
 .spacer {
     display: inline-flex;
-    width: 5px;
+    width: 10px;
 }
 .sound-button {
     display: flex;

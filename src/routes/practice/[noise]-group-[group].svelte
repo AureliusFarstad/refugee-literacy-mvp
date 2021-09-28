@@ -90,14 +90,14 @@
     <div class="learn-the-letters">
         {#if noise == "sound"}
             <div class="english">
-                <EnglishText key={"practice.listen_sound"}></EnglishText>
+                <EnglishText key={"match_sound"}></EnglishText>
             </div>
-            <LearnerText key={"practice.listen_sound"}></LearnerText>
+            <LearnerText key={"match_sound"}></LearnerText>
         {:else if noise == "name"}
             <div class="english">
-                <EnglishText key={"practice.listen_name"}></EnglishText>
+                <EnglishText key={"match_name"}></EnglishText>
             </div>
-            <LearnerText key={"practice.listen_name"}></LearnerText>
+            <LearnerText key={"match_name"}></LearnerText>
         {/if}
     </div>
     <div class="speaker"><SoundSpeaker {noise} letter={correct_letter}/></div> 
@@ -123,11 +123,11 @@
     display: grid;
     padding: 0px 12px;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 50px 124px auto auto;
+    grid-template-rows: 50px 230px auto auto;
     grid-gap: 24px;
 
     padding-top: 10px;
-    padding-bottom: 20px;
+    margin-bottom: 40px;
     place-items: center;
 
     width: 100vw;
@@ -163,7 +163,7 @@
     grid-row: 3 / 4;
     grid-column: 1 / 4;
     aspect-ratio: 1;
-    height: 100%;
+    /* height: 100%; */
     width: 60%;
 }
 .letter-0 {

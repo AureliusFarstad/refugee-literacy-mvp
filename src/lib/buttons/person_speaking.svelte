@@ -1,10 +1,40 @@
 <script>
+    import { locale } from "$lib/stores/i18n";
+    export let key = "";
+    export let eng = false;
     let active;
+    let audio;
+
+    function pressSound() {
+        if (active === true) {return}
+        active = true
+        let source
+        if (eng) {
+            source = `/audio/spoken_text/en/${key}.m4a`
+        }
+        else {
+            source = `/audio/spoken_text/${$locale}/${key}.m4a`
+        }
+        audio.src = source
+        audio.play()
+        return
+    }
+    function audioEnded() {
+        active = false
+    }
 </script>
 
-<div class="btn" class:active="{active}">            
+<div class="btn" class:active="{active}" on:click={pressSound}>            
     <img class="illustration" src="/images/icons/person_countour_sparks_mouth.svg" alt="listen">
 </div>
+
+<audio
+  style="display:none;"
+  bind:this="{audio}"
+  on:ended="{audioEnded}"
+  volume="1"
+  controls
+><track kind="captions" /></audio>
 
 <style>
 .btn {
@@ -27,10 +57,6 @@
     border-width: 1.7px;
     border-color: #032436;
     border-radius: 20px;
-
-    /* font-family: 'Patrick Hand', cursive; */
-
-    /* border:1px solid #3B7A57; */
 
     transition: all 0.6s ease-out;
 }

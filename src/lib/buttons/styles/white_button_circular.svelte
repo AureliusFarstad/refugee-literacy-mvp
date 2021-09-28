@@ -29,7 +29,7 @@
     border:4px solid #ffffff;
     border-radius: 50%;
 
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick Hand';
 
     display:inline-block;
     color:#000004;

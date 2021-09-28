@@ -14,15 +14,15 @@ import White from "$lib/buttons/styles/white_button.svelte";
     <div class="outer-grid">
         <div class="intro-language"> 
             <img class="finger" src="/images/icons/finger.svg" alt="press the button">
-            <EnglishText key={"home.pick_your_language"}></EnglishText>
+            <EnglishText key={"language"}></EnglishText>
         </div>
         <div class="pick-language-select">
             <BigLanguageToggle />
         </div>
     {#if $locale}
         <div in:fade="{{duration: 1200}}" class="welcome">
-            <EnglishText key={"welc"}></EnglishText>
-            <LearnerText key={"welc"}></LearnerText>
+            <EnglishText key={"cont"}></EnglishText>
+            <LearnerText key={"cont"}></LearnerText>
         </div>
         <a href="/browse" in:fade="{{duration: 1200}}" class="forward">
             <White><div class="illustration"><img class="arrow" src="/images/icons/arrow-forward.svg" alt="arrow"></div></White>
@@ -37,7 +37,7 @@ import White from "$lib/buttons/styles/white_button.svelte";
     place-items: center;
     padding: 0px 15px;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 90px 40px auto 130px 70px;
+    grid-template-rows: 45px 70px auto 150px 70px;
     grid-gap: 16px;
     padding-bottom: 20px;
 }
@@ -64,7 +64,7 @@ import White from "$lib/buttons/styles/white_button.svelte";
     position: absolute;
     width: 50px;
     right: -3px;
-    top: -50px;
+    top: -32px;
 }
 
 .pick-language-select {

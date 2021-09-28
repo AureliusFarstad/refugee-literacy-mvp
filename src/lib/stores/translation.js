@@ -1,52 +1,85 @@
 export default {
     en: {
-        "button.name": "Name",
-        "button.sound": "Sound",
-        "button.example": "Example",
+        "language": "Select your \n language.",
+        "cont": "Press the button \n to continue.",
 
-        "group.learn_the_letters": "Learn the letters.",
-        "group.practice_the_letter_sounds": "Practice the sounds.",
-        "group.practice_the_letter_names": "Practice the names.",
+        "alphabet": "Learn the \n alphabet.",
+        "letters": "Learn the letters.",
 
-        "welc": "Press the button \n to continue.",
-        "home.pick_your_language": "Pick your language.",
-        "home.learn_the_alphabet": "Learn the \n alphabet.",
+        "sound": "Sound",
+        "name": "Name",
+        "example": "Example",
+        "sound_expl": "",
+        "name_expl": "",
+        "examp_expl": "",
+        "examp_lett_expl": "",
 
-        "practice.listen_sound": "Listen to the sound. \n Pick the letter.",
-        "practice.listen_name": "Listen to the name. \n Pick the letter."
+        "pract_sound": "Practice the sounds.",
+        "pract_name": "Practice the names.",
+
+        "match_sound": "Listen to the sound \n and select the \nletter.",
+        "match_name": "Listen to the name \n and select the \nletter.",
+
+        "satpin_expl": "",
+
+        "name_expl": "",
+        "sound_expl": "",
+
+        "pract_words": "",
     },
     fa: {
-        "button.name": "سلام",
-        "button.sound": "سلام",
-        "button.example": "سلام",
+        "cont": "برای ادامه دکمه \n را فشار دهید", // "cont": "برای ادامه دکمه را فشار دهید",
 
-        "group.learn_the_letters": "سلام",
-        "group.practice_the_letter_sounds": "سلام",
-        "group.practice_the_letter_names": "سلام",
-        "welc": "برای ادامه دکمه \n را فشار دهید", // "welc": "برای ادامه دکمه را فشار دهید",
+        "alphabet": "الفبا را یاد\n بگیر",
+        "letters": "حروف را یاد بگیر",
 
-        
-        "home.pick_your_language": "سلام",
-        "home.learn_the_alphabet": "سلام",
+        "sound": "صدا",
+        "name": "نام",
+        "example": "مثال",
+        "sound_expl": "",
+        "name_expl": "",
+        "examp_expl": "",
+        "examp_lett_expl": "",
 
-        "practice.listen_sound": "سلام",
-        "practice.listen_name": "سلام"
+        "pract_sound": "صداها را تمرین کنید",
+        "pract_name": "نامها را تمرین کنید",
+
+        "match_sound": "به صدا گوش بده و \nیکی از حروف را \nانتخاب کن",
+        "match_name": "به اسم گوش بده و \nیکی از حروف را \nانتخاب کن",
+
+        "satpin_expl": "",
+
+        "name_expl": "",
+        "sound_expl": "",
+
+        "pract_words": "",
     },
     ar: {
-        "button.name": "اسم",
-        "button.sound": "اسم",
-        "button.example": "اسم",
+        "cont": "اضغط على الزر \n للتوصيل", // "cont": "اضغط على الزر للتوصيل",
 
-        "group.learn_the_letters": "اسم",
-        "group.practice_their_sounds": "اسم",
-        
-        "welc": "اضغط على الزر \n للتوصيل", // "welc": "اضغط على الزر للتوصيل",
+        "alphabet": "تعلم \nالابجديه",
+        "letters": "تعلم الأحرف",
 
-        "home.pick_your_language": "اسم",
-        "home.learn_the_alphabet": "اسم",
+        "sound": "الصوت",
+        "name": "الاسم",
+        "example": "مثال",
+        "sound_expl": "",
+        "name_expl": "",
+        "examp_expl": "",
+        "examp_lett_expl": "",
 
-        "practice.listen_sound": "اسم",
-        "practice.listen_name": "اسم"
+        "pract_sound": "تدرب على الصوت",
+        "pract_name": "تدرب على الاسم",
+
+        "match_sound": "استمع الى الصوت \nواختر الحرف",
+        "match_name": "استمع الى الصوت \nواختر الاسم",
+
+        "satpin_expl": "",
+
+        "name_expl": "",
+        "sound_expl": "",
+
+        "pract_words": "",
     },
   };
   

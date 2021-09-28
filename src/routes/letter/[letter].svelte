@@ -37,9 +37,11 @@ export async function load({ page }) {
     </a>
     <div class="letter-card"><Card {letter} /></div>
 
-    <div class="name-button"><Sound {letter} /></div>
-    <div class="name-explained"><PersonSpeaking></PersonSpeaking></div>
-    <div class="sound-button"><Name {letter} /></div>
+    <div class="sound-button"><Sound {letter} /></div>
+    <div class="sound-explained"><PersonSpeaking key={"sound_expl"}></PersonSpeaking></div>
+    <div class="name-button"><Name {letter} /></div>
+    <div class="name-explained"><PersonSpeaking key={"sound_expl"}></PersonSpeaking></div>
+
     <!-- <div class="example-button"><Example {letter} /></div> -->
 </div>
     
@@ -79,21 +81,29 @@ export async function load({ page }) {
         grid-row: 2 / 3;
         grid-column: 1 / 3;
     }
-    .name-button {
+    .sound-button {
         grid-row: 3 / 4;
         grid-column: 1 / 2;
     }
-    .name-explained {
+    .sound-explained {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .sound-button {
+    .name-button {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
     }
+    .name-explained {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .example-button {
         grid-row: 5 / 6;
         grid-column: 1 / 2;

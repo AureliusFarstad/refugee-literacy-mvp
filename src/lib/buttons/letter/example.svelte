@@ -21,7 +21,7 @@
 
 <Yellow {active}>
     <div class="grid" on:click={pressSound}>
-        <div class="text">{$t("button.example")}</div>
+        <div class="text">{$t("example")}</div>
         <span class="symbol"></span>
     </div>
 </Yellow>

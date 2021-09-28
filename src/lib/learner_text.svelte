@@ -11,7 +11,7 @@
 <div class="right-to-left">
     <div dir="rtl" class="text">{$t(key)}</div>
     <div class="spacer"></div>
-    <PersonSpeaking></PersonSpeaking>
+    <div class="sound-button"><PersonSpeaking {key}></PersonSpeaking></div>
 </div>
 {/if}
 <style>
@@ -23,18 +23,21 @@
 .text {
     color: #000004;
     font-size: 32px;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick Hand';
     text-align: right;
     line-height: 40px;
     white-space: pre-wrap;
     margin-left: auto;
 }
 .spacer {
-    width: 15px;
+    display: inline-flex;
+    width: 10px;
 }
 .sound-button {
     width: 40px;
-    margin-left: auto;
+    /* margin-left: auto; */
+    display: flex;
+    align-items: center;
 }
 
 </style>

@@ -17,9 +17,9 @@ import { group_outros } from "svelte/internal";
     </a>
     <div class="learn-the-letters">
         <div class="english">
-            <EnglishText key={"group.learn_the_letters"}></EnglishText>
+            <EnglishText key={"letters"}></EnglishText>
         </div>
-        <LearnerText key={"group.learn_the_letters"}></LearnerText>
+        <LearnerText key={"letters"}></LearnerText>
     </div>
 
     <div class="row-1">
@@ -38,9 +38,9 @@ import { group_outros } from "svelte/internal";
 
     <div class="practice-the-sounds">
         <div class="english">
-            <EnglishText key={"group.practice_the_letter_sounds"}></EnglishText>
+            <EnglishText key={"pract_sound"}></EnglishText>
         </div>
-        <LearnerText key={"group.practice_the_letter_sounds"}></LearnerText>
+        <LearnerText key={"pract_sound"}></LearnerText>
     </div>
 
     <a class="sound-test" href="/practice/sound-group-2">
@@ -49,9 +49,9 @@ import { group_outros } from "svelte/internal";
 
     <div class="practice-the-names">
         <div class="english">
-            <EnglishText key={"group.practice_the_letter_names"}></EnglishText>
+            <EnglishText key={"pract_name"}></EnglishText>
         </div>
-        <LearnerText key={"group.practice_the_letter_names"}></LearnerText>
+        <LearnerText key={"pract_name"}></LearnerText>
     </div>
 
     <a class="name-test" href="/practice/name-group-2">

@@ -6,7 +6,6 @@
 <div class="btn" class:active="{active}"><slot></slot></div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 .btn {
     display: flex;
