@@ -39,9 +39,8 @@ export async function load({ page }) {
 
     <div class="name-button"><Sound {letter} /></div>
     <div class="name-explained"><PersonSpeaking></PersonSpeaking></div>
-
     <div class="sound-button"><Name {letter} /></div>
-    <div class="example-button"><Example {letter} /></div>
+    <!-- <div class="example-button"><Example {letter} /></div> -->
 </div>
     
     <style>

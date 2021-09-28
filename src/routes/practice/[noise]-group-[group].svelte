@@ -163,6 +163,7 @@
     grid-row: 3 / 4;
     grid-column: 1 / 4;
     aspect-ratio: 1;
+    height: 100%;
     width: 60%;
 }
 .letter-0 {

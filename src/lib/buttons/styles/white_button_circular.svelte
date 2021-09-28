@@ -22,12 +22,10 @@
     height: auto;
     aspect-ratio: 1;
 
-    box-shadow: 0px 8px 0px 0px rgb(146, 146, 160); /* #D7EAC3; */
+    box-shadow: 0px 8px 0px 0px rgb(146, 146, 160);
 
     background: linear-gradient(180deg, rgb(236, 236, 252) 0%, rgb(222, 222, 230) 100%);
 
-    /* background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%); */
-; /* #7CB441; */
     border:4px solid #ffffff;
     border-radius: 50%;
 
@@ -39,7 +37,7 @@
     font-size:40px;
     text-align:center;
 
-    transition: all 0.6s ease-out;
+    /* transition: all 0.6s ease-out; */
 }
 
 .active {

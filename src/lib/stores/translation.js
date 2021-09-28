@@ -8,7 +8,7 @@ export default {
         "group.practice_the_letter_sounds": "Practice the sounds.",
         "group.practice_the_letter_names": "Practice the names.",
 
-        "home.welcome": "Welcome! Press the \n button to continue.",
+        "welc": "Press the button \n to continue.",
         "home.pick_your_language": "Pick your language.",
         "home.learn_the_alphabet": "Learn the \n alphabet.",
 
@@ -23,8 +23,9 @@ export default {
         "group.learn_the_letters": "سلام",
         "group.practice_the_letter_sounds": "سلام",
         "group.practice_the_letter_names": "سلام",
+        "welc": "برای ادامه دکمه \n را فشار دهید", // "welc": "برای ادامه دکمه را فشار دهید",
+
         
-        "home.welcome": "سلام",
         "home.pick_your_language": "سلام",
         "home.learn_the_alphabet": "سلام",
 
@@ -39,7 +40,8 @@ export default {
         "group.learn_the_letters": "اسم",
         "group.practice_their_sounds": "اسم",
         
-        "home.welcome": "اسم",
+        "welc": "اضغط على الزر \n للتوصيل", // "welc": "اضغط على الزر للتوصيل",
+
         "home.pick_your_language": "اسم",
         "home.learn_the_alphabet": "اسم",
 

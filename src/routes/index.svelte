@@ -21,8 +21,8 @@ import White from "$lib/buttons/styles/white_button.svelte";
         </div>
     {#if $locale}
         <div in:fade="{{duration: 1200}}" class="welcome">
-            <EnglishText key={"home.welcome"}></EnglishText>
-            <LearnerText key={"home.welcome"}></LearnerText>
+            <EnglishText key={"welc"}></EnglishText>
+            <LearnerText key={"welc"}></LearnerText>
         </div>
         <a href="/browse" in:fade="{{duration: 1200}}" class="forward">
             <White><div class="illustration"><img class="arrow" src="/images/icons/arrow-forward.svg" alt="arrow"></div></White>

@@ -7,8 +7,6 @@
     var drawFPS          = 60;
 
     export function animate(){
-        console.log('animating letter')
-
         let svg = svgEl.getSVGDocument();
         var paths = svg.querySelectorAll('path');//, length, timer;
         console.log(paths)

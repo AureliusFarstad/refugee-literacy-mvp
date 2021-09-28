@@ -9,7 +9,7 @@
 
 {#if sound}
 <div class="right-to-left">
-    <div class="text">{$t(key)}</div>
+    <div dir="rtl" class="text">{$t(key)}</div>
     <div class="spacer"></div>
     <PersonSpeaking></PersonSpeaking>
 </div>
@@ -24,9 +24,9 @@
     color: #000004;
     font-size: 32px;
     font-family: 'Patrick Hand', cursive;
-    text-align: center;
+    text-align: right;
     line-height: 40px;
-
+    white-space: pre-wrap;
     margin-left: auto;
 }
 .spacer {
