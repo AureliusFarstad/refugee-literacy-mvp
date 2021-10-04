@@ -40,7 +40,7 @@ export async function load({ page }) {
     <div class="sound-button"><Sound {letter} /></div>
     <div class="sound-explained"><PersonSpeaking key={"sound_expl"}></PersonSpeaking></div>
     <div class="name-button"><Name {letter} /></div>
-    <div class="name-explained"><PersonSpeaking key={"sound_expl"}></PersonSpeaking></div>
+    <div class="name-explained"><PersonSpeaking key={"name_expl"}></PersonSpeaking></div>
 
     <!-- <div class="example-button"><Example {letter} /></div> -->
 </div>
