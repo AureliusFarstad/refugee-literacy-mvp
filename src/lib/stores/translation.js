@@ -54,7 +54,7 @@ export default {
 
         "pract_words": "",
     },
-    ar: {
+    fu: {
         "cont": "اضغط على الزر \n للتوصيل", // "cont": "اضغط على الزر للتوصيل",
 
         "alphabet": "تعلم \nالابجديه",
@@ -81,5 +81,32 @@ export default {
 
         "pract_words": "",
     },
+    sh: {
+        "cont": "اضغط على الزر \n للتوصيل", // "cont": "اضغط على الزر للتوصيل",
+
+        "alphabet": "تعلم \nالابجديه",
+        "letters": "تعلم الأحرف",
+
+        "sound": "الصوت",
+        "name": "الاسم",
+        "example": "مثال",
+        "sound_expl": "",
+        "name_expl": "",
+        "examp_expl": "",
+        "examp_lett_expl": "",
+
+        "pract_sound": "تدرب على الصوت",
+        "pract_name": "تدرب على الاسم",
+
+        "match_sound": "استمع الى الصوت \nواختر الحرف",
+        "match_name": "استمع الى الصوت \nواختر الاسم",
+
+        "satpin_expl": "",
+
+        "name_expl": "",
+        "sound_expl": "",
+
+        "pract_words": "",
+    }
   };
   
