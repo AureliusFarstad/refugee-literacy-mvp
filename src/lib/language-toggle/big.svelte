@@ -30,9 +30,9 @@
 </script>
 
 <div class="grid">
-    <div class="farsi toggle" class:selected="{$locale==='fa'}" on:click={setFa}>فارسی</div> 
-    <div class="fusha toggle" class:selected="{$locale==='fu'}" on:click={setFu}>العربية الفصحى</div>
-    <div class="shami toggle" class:selected="{$locale==='sh'}" on:click={setSh}>العربيه العاميه</div>
+    <div class="farsi text" class:selected="{$locale==='fa'}" on:click={setFa}>فارسی</div> 
+    <div class="fusha text" class:selected="{$locale==='fu'}" on:click={setFu}>العربية الفصحى</div>
+    <div class="shami text" class:selected="{$locale==='sh'}" on:click={setSh}>العربيه العاميه</div>
 </div>
 
 <audio
@@ -44,34 +44,32 @@
 
 <style>
     .grid {
-        width: 100vw;
+        width: 280px;
         display: grid;
         grid-template-columns: auto;
-        background-color: rgb(255, 255, 230);
-        grid-template-rows: auto auto auto;
-        grid-row-gap: 14px;
-        padding: 22px 14px;
+        background-color: #EDFDEE;
+        grid-template-rows: 60px 60px;
+        border-color: #238031;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 4px;
+        padding: 8px;
     }
     .selected {
-        border-color: #33b647 !important;;
-        background-color: rgb(238, 238, 210) !important;;
-        color: #238031 !important;
-        box-shadow: -2px -3px 5px 0 hsla(0, 0%, 85.1%, -0.34),
-      2px 6px 8px 0 rgba(0, 0, 0, 0.35);
-
+        background-color: #238031;
+        color: #EDFDEE !important;
+        border-style: solid;
+        border-radius: 6px;
+        border-color: #238031;
+        height: 60px;
     }
-    .toggle {
+    .text {
         font-family: Tahoma, Helvetica;
-        color:black;
-        background-color: rgb(238, 238, 210);
-        border-color: rgb(214, 214, 191);
+        color: #238031;
         font-size: 36px;
         text-align: right;
         line-height: 60px;
         padding-right: 8px;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 4px;
     }
     .farsi {
         direction: rtl;
