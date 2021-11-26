@@ -10,22 +10,29 @@
         audio.src = "/audio/spoken_text/farsi.m4a"
         audio.play()
     }
-    function setAr() {
-        locale.set('ar')
+    function setFu() {
+        locale.set('fu')
         if (!audio.paused) {
             audio.pause()
         }
-        audio.src = "/audio/spoken_text/arabic.m4a"
+        audio.src = "/audio/spoken_text/fusha.m4a"
+        audio.play()
+    }
+    function setSh() {
+        locale.set('sh')
+        if (!audio.paused) {
+            audio.pause()
+        }
+        audio.src = "/audio/spoken_text/shami.m4a"
         audio.play()
     }
 
 </script>
 
 <div class="grid">
-    <!-- <div class="english" on:click="{$locale='en'}">English</div> -->
-    <div class="farsi text" class:selected="{$locale==='fa'}" on:click={setFa}>فارسی</div> 
-    <div class="arabic text" class:selected="{$locale==='ar'}" on:click={setAr}>عَرَبِيّ</div>
-    <!-- سوريه -->
+    <div class="farsi toggle" class:selected="{$locale==='fa'}" on:click={setFa}>فارسی</div> 
+    <div class="fusha toggle" class:selected="{$locale==='fu'}" on:click={setFu}>العربية الفصحى</div>
+    <div class="shami toggle" class:selected="{$locale==='sh'}" on:click={setSh}>العربيه العاميه</div>
 </div>
 
 <audio
@@ -37,37 +44,42 @@
 
 <style>
     .grid {
-        width: 280px;
+        width: 100vw;
         display: grid;
         grid-template-columns: auto;
-        background-color: #EDFDEE;
-        grid-template-rows: 60px 60px;
-        border-color: #238031;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 4px;
-        padding: 8px;
+        background-color: rgb(255, 255, 230);
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 14px;
+        padding: 22px 14px;
     }
     .selected {
-        background-color: #238031;
-        color: #EDFDEE !important;
-        border-style: solid;
-        border-radius: 6px;
-        border-color: #238031;
-        /* border-width: 4px; */
+        border-color: #33b647 !important;;
+        background-color: rgb(238, 238, 210) !important;;
+        color: #238031 !important;
+        box-shadow: -2px -3px 5px 0 hsla(0, 0%, 85.1%, -0.34),
+      2px 6px 8px 0 rgba(0, 0, 0, 0.35);
+
     }
-    .text {
+    .toggle {
         font-family: Tahoma, Helvetica;
-        color: #238031; /* seashell; */
+        color:black;
+        background-color: rgb(238, 238, 210);
+        border-color: rgb(214, 214, 191);
         font-size: 36px;
         text-align: right;
         line-height: 60px;
         padding-right: 8px;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 4px;
     }
     .farsi {
         direction: rtl;
     }
-    .arabic {
+    .fusha {
+        direction: rtl;
+    }
+    .shami {
         direction: rtl;
     }
 </style>
