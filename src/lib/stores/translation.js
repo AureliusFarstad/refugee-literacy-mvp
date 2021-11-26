@@ -22,9 +22,6 @@ export default {
 
         "satpin_expl": "",
 
-        "name_expl": "",
-        "sound_expl": "",
-
         "pract_words": "",
     },
     fa: {
@@ -48,9 +45,6 @@ export default {
         "match_name": "به اسم گوش بده و \nیکی از حروف را \nانتخاب کن",
 
         "satpin_expl": "",
-
-        "name_expl": "",
-        "sound_expl": "",
 
         "pract_words": "",
     },
@@ -76,9 +70,6 @@ export default {
 
         "satpin_expl": "",
 
-        "name_expl": "",
-        "sound_expl": "",
-
         "pract_words": "",
     },
     sh: {
@@ -102,9 +93,6 @@ export default {
         "match_name": "استمع الى الصوت \nواختر الاسم",
 
         "satpin_expl": "",
-
-        "name_expl": "",
-        "sound_expl": "",
 
         "pract_words": "",
     }
