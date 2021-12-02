@@ -1,5 +1,12 @@
 <script>
     export let letter;
+    export let uppercase = false;
+
+    let svgSrc = `/alphabet/lowercase/${letter}.svg`
+    if (uppercase) {
+        svgSrc = `/alphabet/uppercase/${letter}.svg`
+    }
+    console.log(svgSrc)
 
     let svgEl
 
@@ -42,7 +49,7 @@
     }
 </script>
 
-<object bind:this={svgEl} type="image/svg+xml" data="/alphabet/lowercase/{letter}.svg" class="letter-svg" title="letter">
+<object bind:this={svgEl} type="image/svg+xml" data={svgSrc} class="letter-svg" title="letter">
     {letter}
 </object>
 
