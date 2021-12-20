@@ -10,22 +10,29 @@
         audio.src = "/audio/spoken_text/farsi.m4a"
         audio.play()
     }
-    function setAr() {
-        locale.set('ar')
+    function setFu() {
+        locale.set('fu')
         if (!audio.paused) {
             audio.pause()
         }
-        audio.src = "/audio/spoken_text/arabic.m4a"
+        audio.src = "/audio/spoken_text/fusha.m4a"
+        audio.play()
+    }
+    function setSh() {
+        locale.set('sh')
+        if (!audio.paused) {
+            audio.pause()
+        }
+        audio.src = "/audio/spoken_text/shami.m4a"
         audio.play()
     }
 
 </script>
 
 <div class="grid">
-    <!-- <div class="english" on:click="{$locale='en'}">English</div> -->
     <div class="farsi text" class:selected="{$locale==='fa'}" on:click={setFa}>فارسی</div> 
-    <div class="arabic text" class:selected="{$locale==='ar'}" on:click={setAr}>عَرَبِيّ</div>
-    <!-- سوريه -->
+    <div class="fusha text" class:selected="{$locale==='fu'}" on:click={setFu}>العربية الفصحى</div>
+    <div class="shami text" class:selected="{$locale==='sh'}" on:click={setSh}>العربيه العاميه</div>
 </div>
 
 <audio
@@ -54,11 +61,11 @@
         border-style: solid;
         border-radius: 6px;
         border-color: #238031;
-        /* border-width: 4px; */
+        height: 60px;
     }
     .text {
         font-family: Tahoma, Helvetica;
-        color: #238031; /* seashell; */
+        color: #238031;
         font-size: 36px;
         text-align: right;
         line-height: 60px;
@@ -67,7 +74,10 @@
     .farsi {
         direction: rtl;
     }
-    .arabic {
+    .fusha {
+        direction: rtl;
+    }
+    .shami {
         direction: rtl;
     }
 </style>

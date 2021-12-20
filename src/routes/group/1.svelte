@@ -93,6 +93,7 @@ import { group_outros } from "svelte/internal";
 
     .button {
         width: 100%;
+        /* height: 100%; */
         aspect-ratio: 1;
     }
     .letter {
@@ -115,7 +116,7 @@ import { group_outros } from "svelte/internal";
     .p {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        aspect-ratio: 1;
+        /* aspect-ratio: 1; */
     }
     .i {
         grid-row: 4 / 5;
