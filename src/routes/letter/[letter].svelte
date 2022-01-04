@@ -1,6 +1,6 @@
 <script context="module">
-export async function load({ page }) {
-    let letter = page.params.letter
+export async function load({ params }) {
+    let letter = params.letter
 
     return { props: {letter} }
 }

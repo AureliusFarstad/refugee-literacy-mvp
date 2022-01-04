@@ -1,7 +1,7 @@
 <script context="module">
-    export async function load({ page }) {
-        let noise = page.params.noise
-        let group = page.params.group
+    export async function load({ params }) {
+        let noise = params.noise
+        let group = params.group
         return { props: {
             noise: noise,
             group: group
