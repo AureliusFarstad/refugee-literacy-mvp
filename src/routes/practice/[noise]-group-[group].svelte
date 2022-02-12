@@ -12,8 +12,8 @@
 <script>
     import { t, locale, locales } from "$lib/data/stores/i18n";
     import White from "$lib/components/buttons/styles/white_button.svelte";
-    import EnglishText from "$lib/english_text.svelte";
-    import LearnerText from "$lib/learner_text.svelte";
+    import EnglishText from "$lib/components/english_text.svelte";
+    import LearnerText from "$lib/components/learner_text.svelte";
     import SoundSpeaker from "$lib/components/buttons/sound_speaker.svelte"
     import SoundLetter from "$lib/components/buttons/sound_letter.svelte"
     export let noise;
