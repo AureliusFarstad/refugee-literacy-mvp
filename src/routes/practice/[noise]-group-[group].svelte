@@ -10,7 +10,7 @@
 </script>
 
 <script>
-    import { t, locale, locales } from "$lib/data/i18n";
+    import { t, locale, locales } from "$lib/data/stores/i18n";
     import White from "$lib/components/buttons/styles/white_button.svelte";
     import EnglishText from "$lib/english_text.svelte";
     import LearnerText from "$lib/learner_text.svelte";
