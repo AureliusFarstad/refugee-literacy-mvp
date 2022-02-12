@@ -1,8 +1,8 @@
 <script>
-    import White from "$lib/buttons/styles/white_button.svelte";
-    import WhiteCircular from "$lib/buttons/styles/white_button_circular.svelte";
-    import EnglishText from "$lib/english_text.svelte";
-    import LearnerText from "$lib/learner_text.svelte";
+    import White from "$lib/components/buttons/styles/white_button.svelte";
+    import WhiteCircular from "$lib/components/buttons/styles/white_button_circular.svelte";
+    import EnglishText from "$lib/components/english_text.svelte";
+    import LearnerText from "$lib/components/learner_text.svelte";
 </script>
 
 <body>
@@ -21,6 +21,17 @@
         <LearnerText key={"alphabet"}></LearnerText>
         </div>
     </div>
+    <a href="/books" class="books"> 
+        <WhiteCircular><img class="book-icon" src="/images/icons/book.svg" alt="arrow"></WhiteCircular>
+    </a>
+    <div class="read-books">
+        <div>
+        <EnglishText key={"book"}></EnglishText>
+        </div>
+        <div>
+        <LearnerText key={"book"}></LearnerText>
+        </div>
+    </div>
 </div>
 </body>
 
@@ -32,7 +43,7 @@
     padding-left: 15px;
     padding-right: 8px;
     grid-template-columns: 35% 65%; 
-    grid-template-rows: 50px auto;
+    grid-template-rows: 50px auto auto;
     row-gap: 22px;
 }
 
@@ -60,6 +71,11 @@
     grid-column: 1 / 2;
     width: 100%;
 }
+.books {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 100%;
+}
 
 .alphabet-blocks {
     display: block;
@@ -67,9 +83,21 @@
     height: 90%;
     transform: translate(0%, 5%);
 }
+.book-icon {
+    display: block;
+    /* position: absolute;    */
+    height: 100%;
+    transform: translate(0%, 10%);
+}
 
 .learn-alphabet {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 }
+.read-books {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+
+
 </style>

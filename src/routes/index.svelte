@@ -1,13 +1,13 @@
 <script>
-import { locale } from "$lib/stores/i18n";
+import { locale } from "$lib/data/stores/i18n";
 import { fade } from 'svelte/transition';
 
 $locale="";
 
-import BigLanguageToggle from '$lib/language-toggle/big.svelte'
-import EnglishText from '$lib/english_text.svelte';
-import LearnerText from '$lib/learner_text.svelte';
-import White from "$lib/buttons/styles/white_button.svelte";
+import BigLanguageToggle from '$lib/components/language-toggle/big.svelte'
+import EnglishText from '$lib/components/english_text.svelte';
+import LearnerText from '$lib/components/learner_text.svelte';
+import White from "$lib/components/buttons/styles/white_button.svelte";
 </script>
 
 <body>
