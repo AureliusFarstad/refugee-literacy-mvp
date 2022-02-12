@@ -1,12 +1,12 @@
 <script>
-    import { t, locale, locales } from "$lib/stores/i18n";
+    import { t, locale, locales } from "$lib/data/stores/i18n";
 
-    import EnglishText from "$lib/english_text.svelte";
-    import LearnerText from "$lib/learner_text.svelte";
-    import White from '$lib/buttons/styles/white_button.svelte'
-    import SvgLetter from "$lib/svg_letter.svelte";
-    import NameQuiz from '$lib/buttons/group/name_quiz.svelte'
-    import SoundQuiz from "$lib/buttons/group/sound_quiz.svelte";
+    import EnglishText from "$lib/components/english_text.svelte";
+    import LearnerText from "$lib/components/learner_text.svelte";
+    import White from '$lib/components/buttons/styles/white_button.svelte'
+    import SvgLetter from "$lib/components/svg_letter.svelte";
+    import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
+    import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
 import { group_outros } from "svelte/internal";
 </script>

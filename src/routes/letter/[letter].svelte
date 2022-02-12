@@ -9,12 +9,12 @@ export async function load({ params }) {
 </script>
 
 <script>
-    import Card from "$lib/card.svelte"
-    import Sound from "$lib/buttons/letter/sound.svelte"
-    import White from "$lib/buttons/styles/white_button.svelte";
-    import Name from "$lib/buttons/letter/name.svelte"
-    import Example from "$lib/buttons/letter/example.svelte"
-    import PersonSpeaking from "$lib/buttons/person_speaking.svelte"
+    import Card from "$lib/components/card.svelte"
+    import Sound from "$lib/components/buttons/letter/sound.svelte"
+    import White from "$lib/components/buttons/styles/white_button.svelte";
+    import Name from "$lib/components/buttons/letter/name.svelte"
+    import Example from "$lib/components/buttons/letter/example.svelte"
+    import PersonSpeaking from "$lib/components/buttons/person_speaking.svelte"
 
     export let letter
     let back_url
