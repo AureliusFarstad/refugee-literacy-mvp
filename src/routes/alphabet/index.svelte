@@ -1,9 +1,6 @@
 <script>
 import { locale } from '$lib/data/stores/i18n';
 import White from '$lib/components/buttons/styles/white_button.svelte'
-import BigLanguageToggle from '$lib/components/language-toggle/big.svelte'
-import EnglishText from '$lib/components/english_text.svelte';
-import LearnerText from '$lib/components/learner_text.svelte';
 
 let active;
 let audio;
@@ -26,8 +23,8 @@ function audioEnded() {
             <White><div class="illustration"><img class="arrow" src="/images/icons/arrow_backward.svg" alt="arrow"></div></White>
         </a>
         <div class="introduction">
-            <div class="btn" class:active="{active}" on:click={pressSound}>
-                <img class="teacher_icon" src="/images/icons/teacher_female.svg" alt="listen">
+            <div class="teacher-btn" class:active="{active}" on:click={pressSound}>
+                <img class="teacher-icon" src="/images/icons/teacher_female.svg" alt="listen">
             </div>
             <audio
                 style="display:none;"
@@ -52,91 +49,105 @@ function audioEnded() {
 
 <style>
 .outer-grid { 
-    display: grid;
     place-items: center;
-    padding: 0px 15px;
-    padding-top: 10px;
-    grid-template-columns: 1fr 1fr 1fr; 
+
+    display: grid;
     grid-template-rows: 50px auto 70px 70px 70px auto;
+    grid-template-columns: 1fr 1fr 1fr; 
     row-gap: 22px;
+
+    padding: 10px 15px 0;
 }
 
 .back-button {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+
     height: 100%;
     width: 100%;
 }
+
 .illustration {
-    display: flex;
     align-items: center;
     justify-content: center;
+
+    display: flex;
+
     height: 100%;
 }
+
 .arrow {
-    position: absolute;   
+    position: absolute;  
+
     height: 110%;
 }
 
 .introduction {
-    width: 100%;
     grid-row: 2 / 3;
     grid-column: 1 / 4;
-    display: flex;
     justify-content: center;
-}
-.btn {
+
     display: flex;
+
+    width: 100%;
+}
+
+.teacher-btn {
+    position: relative;
+    top: 0px;
     align-items: center;
     justify-content: center;
 
-    position: relative;
-    top: 0px;
+    display: flex;
 
-    box-sizing: border-box;
+    transition: all 0.6s ease-out;
 
-    width: 50%;
-    aspect-ratio: 1;
-
-    box-shadow: 0px 6px 0px 0px #238031; /* #D7EAC3; */
-
-    background-color: #EDFDEE;
-
+    box-shadow: 0px 6px 0px 0px #238031;
     border-style: solid;
     border-width: 2px;
     border-color: #032436;
     border-radius: 50%;
+    width: 170px;
+    height: 170px;
 
-    transition: all 0.6s ease-out;
+    background-color: #EDFDEE;
 }
-.teacher_icon {
-    height: 92%;
+
+.teacher-icon {
+    transform: translate(0%, 9%);
+
     width: auto;
-    transform: translate(0%, 9%)
+    height: 92%;
 }
+
 .active {
     position: relative;
     top: 6px;
+
+    transition: all 0.6s ease-out;
+
     box-shadow: 0px 2px 0px 0px #60a83d;
     border:4px solid #fffd72;
-    transition: all 0.6s ease-out;
-    /* transition: all 2s ease-in-out 0s 1 forward both; */
-    /*  border 0.5s ease-in-out 1s 1 forward both; */
 }
 
 .group-1 {
-    width: 100%;
     grid-row: 3 / 4;
     grid-column: 1 / 4;
-}
-.group-2 {
+
     width: 100%;
+}
+
+.group-2 {
     grid-row: 4 / 5;
     grid-column: 1 / 4;
-}
-.group-3 {
+
     width: 100%;
+}
+
+.group-3 {
     grid-row: 5 / 6;
     grid-column: 1 / 4;
+
+    width: 100%;
 }
 </style>

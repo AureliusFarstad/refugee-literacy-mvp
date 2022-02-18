@@ -58,105 +58,116 @@
 
 <style>
 .outer-grid { 
-    display: grid;
     place-items: center;
-    height: calc(100vh - 15px);
-    padding: 0px 15px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    grid-template-columns: 1fr 1fr 1fr; 
+
+    display: grid;
     grid-template-rows: 50px auto 40px 50px;
+    grid-template-columns: 1fr 1fr 1fr; 
     row-gap: 22px;
+
+    height: calc(100vh - 15px);
+    padding: 10px 15px 5px;
 }
 
 .back-button {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    height: 100%;
+
     width: 100%;
+    height: 100%;
 }
+
 .illustration {
-    display: flex;
     align-items: center;
     justify-content: center;
+
+    display: flex;
+
     height: 100%;
 }
+
 .book {
     transform: translate(0%, 9%);
+
     height: 150%;
 }
 
 .page {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
-
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-radius: 6px;
-
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    display: flex;
+
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
 }
+
 .image-container {
-    /* max-width: 100%;  */
-    max-height: 50vh;
     overflow: hidden;
+
+    max-height: 50vh;
 }
+
 .image {
     width: 100%;
     height: auto;
 }
+
 .text {
-    color: #000004;
+    margin: 0 2px 4px;
+
     font-size: 32px;
+    line-height: 36px;
     font-family: 'Patrick Hand';
     text-align: center;
-    line-height: 36px;
     white-space: pre-wrap;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-bottom: 4px;
+    color: #000004;
 }
 
 .sound-button {
     grid-row: 3 / 5;
     grid-column: 2 / 3;
-
     position: relative;
     top: -12px;
 
-    width: 100%;
     padding: 8px;
+    width: 100px;
+    height: 100px;
 }
 
 .last-page {
     grid-row: 4 / 5;
     grid-column: 1 / 2;
-    height: 100%;
+
     width: 80%;
+    height: 100%;
 }
+
 .next-page {
     grid-row: 4 / 5;
     grid-column: 3 / 4;
-    height: 100%;
-    width: 80%;
     float: right;
+
+    width: 80%;
+    height: 100%;
 }
+
 .arrow {
-    position: absolute;   
+    position: absolute;
+
     height: 110%;
 }
+
 .arrow-forward {
     position: absolute;   
-    height: 110%;
+
     transform: translate(0%, 12%);
+
+    height: 110%;
 }
-
-/* .text {
-    grid-row: 3 / 4;
-    grid-column: 1 / 4;
-} */
 </style>
-

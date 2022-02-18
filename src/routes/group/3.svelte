@@ -60,7 +60,7 @@ import { group_outros } from "svelte/internal";
         padding: 0px 15px;
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: 50px 84px 27vw 27vw 84px 33vw 84px 33vw;
-        grid-gap: 22px;
+        grid-row-gap: 22px;
         place-items: center;
         padding-top: 10px;
         padding-bottom: 20px;
@@ -92,8 +92,8 @@ import { group_outros } from "svelte/internal";
     }
 
     .button {
-        width: 100%;
-        aspect-ratio: 1;
+        width: 27vw;
+        height: 27vw;
     }
     .letter {
         font-size: 13vw;
@@ -115,7 +115,6 @@ import { group_outros } from "svelte/internal";
     .l {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        aspect-ratio: 1;
     }
     .f {
         grid-row: 4 / 5;
@@ -136,8 +135,7 @@ import { group_outros } from "svelte/internal";
         grid-row: 6 / 7;
         grid-column: 1 / 4;  
         height: 100%;
-        width: auto; 
-        aspect-ratio: 2;
+        width: 80%; 
     }
 
     .practice-the-names {
@@ -154,7 +152,6 @@ import { group_outros } from "svelte/internal";
         grid-row: 8 / 9;
         grid-column: 1 / 4;  
         height: 100%;
-        width: auto; 
-        aspect-ratio: 2;
+        width: 80%; 
     }
     </style>
