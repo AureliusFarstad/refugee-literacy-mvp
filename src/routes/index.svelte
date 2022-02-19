@@ -34,19 +34,21 @@ import White from "$lib/components/buttons/styles/white_button.svelte";
 <style>
 .outer-grid { 
     display: grid;
-    place-items: center;
-    padding: 0px 15px;
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 45px 70px auto 150px 70px;
     grid-gap: 16px;
-    padding-bottom: 20px;
+    place-items: center;
+
+    padding: 0 15px 20px 0;
 }
 
 .intro-language {
-    position: relative;
     grid-row: 2 / 3;
     grid-column: 1 / 4;
+    position: relative;
+
     width: auto;
+
     text-align: center;
 }
 
@@ -60,11 +62,13 @@ import White from "$lib/components/buttons/styles/white_button.svelte";
 }
 
 .finger {
-    animation: MoveUpDown 1.5s linear infinite;
     position: absolute;
-    width: 50px;
-    right: -3px;
     top: -32px;
+    right: -3px;
+
+    animation: MoveUpDown 1.5s linear infinite;
+
+    width: 50px;
 }
 
 .pick-language-select {
@@ -73,8 +77,6 @@ import White from "$lib/components/buttons/styles/white_button.svelte";
 }
 
 .welcome {
-    /* display: inline-block; */
-    /* width: auto; */
     grid-row: 4 / 5;
     grid-column: 1 / 4;
 }
@@ -82,22 +84,23 @@ import White from "$lib/components/buttons/styles/white_button.svelte";
 .forward {
     grid-row: 5 / 6;
     grid-column: 1 / 4;
-    width: auto;
-    height: 100%;
+
+    width: 140px;
+    height: 70px;
 }
 
 .illustration {
     display: flex;
     align-items: center;
     justify-content: center;
+
     height: 100%;
-    aspect-ratio: 2;
 }
 
 .arrow {
     display: block;
-    /* position: absolute;    */
-    height: 100%;
     transform: translate(0%, 12%);
+
+    height: 100%;
 }
 </style>

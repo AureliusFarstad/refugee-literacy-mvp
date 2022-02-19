@@ -4,8 +4,6 @@ export async function load({ params }) {
 
     return { props: {letter} }
 }
-
-
 </script>
 
 <script>
@@ -13,7 +11,6 @@ export async function load({ params }) {
     import Sound from "$lib/components/buttons/letter/sound.svelte"
     import White from "$lib/components/buttons/styles/white_button.svelte";
     import Name from "$lib/components/buttons/letter/name.svelte"
-    import Example from "$lib/components/buttons/letter/example.svelte"
     import PersonSpeaking from "$lib/components/buttons/person_speaking.svelte"
 
     export let letter
@@ -41,71 +38,75 @@ export async function load({ params }) {
     <div class="sound-explained"><PersonSpeaking key={"sound_expl"}></PersonSpeaking></div>
     <div class="name-button"><Name {letter} /></div>
     <div class="name-explained"><PersonSpeaking key={"name_expl"}></PersonSpeaking></div>
-
-    <!-- <div class="example-button"><Example {letter} /></div> -->
 </div>
     
-    <style>
-    .outer-grid { 
-        display: grid;
-        padding: 0px 12px;
-        grid-template-columns: auto 40px; 
-        grid-template-rows: 50px 3fr 1fr 1fr 1fr;
-        grid-row-gap: 24px;
-        grid-column-gap: 10px;
+<style>
+.outer-grid { 
+    display: grid;
+    grid-template-rows: 50px 3fr 1fr 1fr 1fr;
+    grid-template-columns: auto 40px; 
+    grid-row-gap: 24px;
+    grid-column-gap: 10px;
 
-        padding-top: 10px;
-        padding-bottom: 20px;
+    padding: 10px 12px 20px;
+    width: 100vw;
+    height: 100vh;
+}
 
-        width: 100vw;
-        height: 100vh;
-    }
-    .back-button {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        height: 100%;
-        aspect-ratio: 2;
-    }
-    .illustration {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-    .arrow {
-        position: absolute;   
-        height: 110%;
-    }
+.back-button {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 
-    .letter-card {
-        grid-row: 2 / 3;
-        grid-column: 1 / 3;
-    }
-    .sound-button {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-    }
-    .sound-explained {
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .name-button {
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
-    }
-    .name-explained {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    width: 100px;
+    height: 50px;
+}
 
-    .example-button {
-        grid-row: 5 / 6;
-        grid-column: 1 / 2;
-    }
-    </style>
+.illustration {
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;   
+
+    height: 110%;
+}
+
+.letter-card {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.sound-button {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+.sound-explained {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+}
+
+.name-button {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+
+.name-explained {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+}
+
+</style>

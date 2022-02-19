@@ -1,14 +1,9 @@
 <script>
-    import { t, locale, locales } from "$lib/data/stores/i18n";
-
-    import EnglishText from "$lib/components/english_text.svelte";
-    import LearnerText from "$lib/components/learner_text.svelte";
-    import White from '$lib/components/buttons/styles/white_button.svelte'
-    import SvgLetter from "$lib/components/svg_letter.svelte";
-    import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
-    import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
-
-import { group_outros } from "svelte/internal";
+import EnglishText from "$lib/components/english_text.svelte";
+import LearnerText from "$lib/components/learner_text.svelte";
+import White from '$lib/components/buttons/styles/white_button.svelte'
+import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
+import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 </script>
 
 <div class="outer-grid">
@@ -23,8 +18,8 @@ import { group_outros } from "svelte/internal";
     </div>
 
     <div class="row-1">
-        <a class="c" href="/letter/c"><White><div class="letter">c</div></White></a>
-        <a class="k" href="/letter/k"><White><div class="letter">k</div></White></a>
+        <a class="c button" href="/letter/c"><White><div class="letter">c</div></White></a>
+        <a class="k button" href="/letter/k"><White><div class="letter">k</div></White></a>
     </div>
 
     <a class="e button" href="/letter/e"><White><div class="letter">e</div></White></a>
@@ -32,8 +27,8 @@ import { group_outros } from "svelte/internal";
     <a class="r button" href="/letter/r"><White><div class="letter">r</div></White></a>
 
     <div class="row-2">
-        <a class="m" href="/letter/m"><White><div class="letter">m</div></White></a>
-        <a class="d" href="/letter/d"><White><div class="letter">d</div></White></a>
+        <a class="m button" href="/letter/m"><White><div class="letter">m</div></White></a>
+        <a class="d button" href="/letter/d"><White><div class="letter">d</div></White></a>
     </div>
 
     <div class="practice-the-sounds">
@@ -65,7 +60,7 @@ import { group_outros } from "svelte/internal";
         padding: 0px 15px;
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-rows: 50px 84px 27vw 27vw 27vw 84px 33vw 84px 33vw;
-        grid-gap: 22px;
+        grid-row-gap: 22px;
         place-items: center;
         padding-top: 10px;
         padding-bottom: 20px;
@@ -97,8 +92,8 @@ import { group_outros } from "svelte/internal";
     }
 
     .button {
-        width: 100%;
-        aspect-ratio: 1;
+        width: 27vw;
+        height: 27vw;
     }
     .letter {
         font-size: 13vw;
@@ -112,15 +107,12 @@ import { group_outros } from "svelte/internal";
         display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        gap: 22px;
     }
     .c {
-        height: 100%;
-        aspect-ratio: 1;
+        margin-right: 6px;
     }
     .k {
-        height: 100%;
-        aspect-ratio: 1;
+        margin-left: 6px;
     }
 
     .e {
@@ -144,15 +136,12 @@ import { group_outros } from "svelte/internal";
         display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        gap: 22px;
     }
     .m {
-        height: 100%;
-        aspect-ratio: 1;
+        margin-right: 6px;
     }
     .d {
-        height: 100%;
-        aspect-ratio: 1;
+        margin-left: 6px;
     }
 
     .practice-the-sounds {
@@ -165,8 +154,7 @@ import { group_outros } from "svelte/internal";
         grid-row: 7 / 8;
         grid-column: 1 / 4;  
         height: 100%;
-        width: auto; 
-        aspect-ratio: 2;
+        width: 80%; 
     }
 
     .practice-the-names {
@@ -183,7 +171,6 @@ import { group_outros } from "svelte/internal";
         grid-row: 9 / 10;
         grid-column: 1 / 4;  
         height: 100%;
-        width: auto; 
-        aspect-ratio: 2;
+        width: 80%; 
     }
     </style>

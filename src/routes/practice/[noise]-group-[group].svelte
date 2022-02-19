@@ -10,77 +10,71 @@
 </script>
 
 <script>
-    import { t, locale, locales } from "$lib/data/stores/i18n";
-    import White from "$lib/components/buttons/styles/white_button.svelte";
-    import EnglishText from "$lib/components/english_text.svelte";
-    import LearnerText from "$lib/components/learner_text.svelte";
-    import SoundSpeaker from "$lib/components/buttons/sound_speaker.svelte"
-    import SoundLetter from "$lib/components/buttons/sound_letter.svelte"
-    export let noise;
-    export let group;
-    let audio;
+import White from "$lib/components/buttons/styles/white_button.svelte";
+import EnglishText from "$lib/components/english_text.svelte";
+import LearnerText from "$lib/components/learner_text.svelte";
+import SoundSpeaker from "$lib/components/buttons/sound_speaker.svelte"
+import SoundLetter from "$lib/components/buttons/sound_letter.svelte"
+export let noise;
+export let group;
+let audio;
 
-    const letter_groups = {
-        1: ["s", "a", "t", "p", "i", "n"],
-        2: ["c", "k", "e", "h", "r", "m", "d"],
-        3: ["g", "o", "u", "l", "f", "b"],
-        4: ["j", "z", "w", "v", "y", "x"]
+const letter_groups = {
+    1: ["s", "a", "t", "p", "i", "n"],
+    2: ["c", "k", "e", "h", "r", "m", "d"],
+    3: ["g", "o", "u", "l", "f", "b"],
+    4: ["j", "z", "w", "v", "y", "x"]
+}
+
+const LETTERS = letter_groups[group]
+
+function shuffle(original) {
+    console.log(original)
+    var array = [...original]
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
+    return array;
+}
 
-    const LETTERS = letter_groups[group]
+var correct_letter, three_letters
 
-    function shuffle(original) {
-        console.log(original)
-        var array = [...original]
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-        return array;
-    }
+function selectLetters() {
+    let shuffled = shuffle(LETTERS)
+    correct_letter = shuffled[0]
+    let falses = shuffled.slice(1,3)
+    three_letters = shuffle([...falses, correct_letter])
+}
 
-    var correct_letter, three_letters
+selectLetters()
+let guessed_letter = ""
 
-    function selectLetters() {
-        let shuffled = shuffle(LETTERS)
-        correct_letter = shuffled[0]
-        let falses = shuffled.slice(1,3)
-        three_letters = shuffle([...falses, correct_letter])
-    }
-
+function reset() {
+    guessed_letter = ""
     selectLetters()
-    let guessed_letter = ""
+}
 
-    function reset() {
-        guessed_letter = ""
-        selectLetters()
+function press(letter, i) {
+    guessed_letter = letter
+    let audio_source
+    console.log(guessed_letter==correct_letter)
+    console.log(correct_letter)
+    if (guessed_letter == correct_letter) {
+        audio_source = "/audio/sound_effects/correct_tone.mp3"
+    } else {
+        audio_source = "/audio/sound_effects/error_tone.mp3"
     }
-
-    function press(letter, i) {
-        guessed_letter = letter
-        let audio_source
-        console.log(guessed_letter==correct_letter)
-        console.log(correct_letter)
-        if (guessed_letter == correct_letter) {
-            audio_source = "/audio/sound_effects/correct_tone.mp3"
-        } else {
-            audio_source = "/audio/sound_effects/error_tone.mp3"
-        }
-        audio.src = audio_source
-        setTimeout(() => {
-            audio.play()
-        }, 800);
-        setTimeout(() => {
-            reset()
-        }, 3200);
-    }
-
-    
-
-    // on:click={}
-
+    audio.src = audio_source
+    setTimeout(() => {
+        audio.play()
+    }, 800);
+    setTimeout(() => {
+        reset()
+    }, 3200);
+}
 </script>
 
 <div class="outer-grid"> 
@@ -121,66 +115,79 @@
     position: relative;
 
     display: grid;
-    padding: 0px 12px;
+    padding: 10px 12px 18px;
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 50px 230px auto auto;
     grid-gap: 24px;
 
-    padding-top: 10px;
-    margin-bottom: 40px;
     place-items: center;
 
     width: 100vw;
     height: 100vh;
 }
+
 .back-button {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    height: 100%;
+
     width: 100%;
+    height: 100%;
 }
 
 .illustration {
-    display: flex;
     align-items: center;
     justify-content: center;
+
+    display: flex;
+
     height: 100%;
 }
 
 .arrow {
     position: absolute;   
+
     height: 110%;
 }
+
 .learn-the-letters {
-    width: auto;
     grid-row: 2 / 3;
     grid-column: 1 / 4;   
+
+    width: auto;
 }
+
 .english {
     margin-bottom: 8px;
 }
+
 .speaker {
     grid-row: 3 / 4;
     grid-column: 1 / 4;
-    aspect-ratio: 1;
-    /* height: 100%; */
-    width: 60%;
+
+    width: 80%;
+    height: 100%;
 }
+
 .letter-0 {
     grid-row: 4 / 5;
     grid-column: 1 / 2;
+
     height: 100%;
     width: 100%;
 }
+
 .letter-1 {
     grid-row: 4 / 5;
     grid-column: 2 / 3;
+
     height: 100%;
     width: 100%;
 }
+
 .letter-2 {
     grid-row: 4 / 5;
     grid-column: 3 / 4;
+
     height: 100%;
     width: 100%;
 }
