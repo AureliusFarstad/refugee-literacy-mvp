@@ -21,16 +21,18 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
     <a class="d button" href="/letter/d"><WhiteBtn><div class="letter">d</div></WhiteBtn></a>
     <a class="e button" href="/letter/e"><WhiteBtn><div class="letter">e</div></WhiteBtn></a>
-    <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a>
 
     <!-- <div class="row-1">
         <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
         <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
     </div> -->
 
+    <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a>
     <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
     <a class="r button" href="/letter/r"><WhiteBtn><div class="letter">r</div></WhiteBtn></a>
+
     <a class="m button" href="/letter/m"><WhiteBtn><div class="letter">m</div></WhiteBtn></a>
+
 
     <div class="practice-the-sounds">
         <div class="english">
@@ -60,8 +62,8 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     place-items: center;
 
     display: grid;
-    grid-template-rows: 50px 84px 24vw 25vw 27vw 84px 33vw 84px 33vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 84px 27vw 27vw 27vw 84px 33vw 84px 33vw;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 22px;
 
     padding: 10px 0 20px;
@@ -98,8 +100,8 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 }
 
 .button {
-    width: 22vw;
-    height: 22vw;
+    width: 27vw;
+    height: 27vw;
 }
 
 .letter {
@@ -129,11 +131,11 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     grid-row: 3 / 4;
     grid-column: 3 / 4;
 }
+
 .k {
     grid-row: 4 / 5;
     grid-column: 1 / 2;
 }
-
 .h {
     grid-row: 4 / 5;
     grid-column: 2 / 3;
@@ -141,10 +143,6 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 .r {
     grid-row: 4 / 5;
     grid-column: 3 / 4;
-}
-.m {
-    grid-row: 5 / 6;
-    grid-column: 2 / 3;
 }
 
 /* .row-2 {
@@ -156,7 +154,11 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     flex-direction: row;
     justify-content: center;
 } */
-
+.m {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+    /* margin-right: 6px; */
+}
 /* .d {
     margin-left: 6px;
 } */
