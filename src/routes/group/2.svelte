@@ -18,19 +18,30 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <LearnerText key={"letters"}></LearnerText>
     </div>
 
-    <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
+    <div class="row-1">
+        <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
+        <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
+        <a class="d button" href="/letter/d"><WhiteBtn><div class="letter">d</div></WhiteBtn></a>
+        <a class="e button" href="/letter/e"><WhiteBtn><div class="letter">e</div></WhiteBtn></a>
+    </div>
+
+    <div class="row-2">
+        <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a>
+        <a class="r button" href="/letter/r"><WhiteBtn><div class="letter">r</div></WhiteBtn></a>
+        <a class="m button" href="/letter/m"><WhiteBtn><div class="letter">m</div></WhiteBtn></a>
+    </div>
+
+
+    <!-- <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
     <a class="d button" href="/letter/d"><WhiteBtn><div class="letter">d</div></WhiteBtn></a>
     <a class="e button" href="/letter/e"><WhiteBtn><div class="letter">e</div></WhiteBtn></a>
-    <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a>
+    <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a> -->
 
     <!-- <div class="row-1">
         <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
         <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
     </div> -->
 
-    <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
-    <a class="r button" href="/letter/r"><WhiteBtn><div class="letter">r</div></WhiteBtn></a>
-    <a class="m button" href="/letter/m"><WhiteBtn><div class="letter">m</div></WhiteBtn></a>
 
     <div class="practice-the-sounds">
         <div class="english">
@@ -60,11 +71,11 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     place-items: center;
 
     display: grid;
-    grid-template-rows: 50px 84px 24vw 25vw 27vw 84px 33vw 84px 33vw;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 84px 21vw 21vw 84px 33vw 84px 33vw;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 22px;
 
-    padding: 10px 0 20px;
+    padding: 10px 10px 20px;
 }
 
 .back-button {
@@ -73,6 +84,8 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
     width: 100%;
     height: 100%;
+
+    /* padding-left: 10px; */
 }
 
 .illustration {
@@ -98,78 +111,49 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 }
 
 .button {
-    width: 22vw;
-    height: 22vw;
+    width: 20vw;
+    height: 20vw;
 }
 
 .letter {
     font-size: 13vw;
 }
 
-/* .row-1 {
+.row-1 {
     grid-row: 3 / 4;
     grid-column: 1 / 4;
 
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
+    column-gap: 1em;
 
     width: 100%;
     height: 100%;
-} */
-.c {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-}
-.d {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-}
-.e {
-    grid-row: 3 / 4;
-    grid-column: 3 / 4;
-}
-.k {
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
 }
 
-.h {
+.row-2 {
     grid-row: 4 / 5;
-    grid-column: 2 / 3;
-}
-.r {
-    grid-row: 4 / 5;
-    grid-column: 3 / 4;
-}
-.m {
-    grid-row: 5 / 6;
-    grid-column: 2 / 3;
-}
-
-/* .row-2 {
-    grid-row: 5 / 6;
     grid-column: 1 / 4;
-    width: 100%;
-    height: 100%;
+
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
-} */
+    column-gap: 1em;
 
-/* .d {
-    margin-left: 6px;
-} */
+    width: 100%;
+    height: 100%;
+}
 
 .practice-the-sounds {
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
     grid-column: 1 / 4;    
 
     width: auto; 
 }
 
 .sound-test {
-    grid-row: 7 / 8;
+    grid-row: 6 / 7;
     grid-column: 1 / 4; 
 
     width: 80%; 
@@ -177,21 +161,21 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 }
 
 .practice-the-names {
-    grid-row: 8 / 9;
+    grid-row: 7 / 8;
     grid-column: 1 / 4; 
         
     width: auto; 
 }
 
-.english {
-    margin-bottom: 8px;
-}
-
 .name-test {
-    grid-row: 9 / 10;
+    grid-row: 8 / 9;
     grid-column: 1 / 4;  
 
     width: 80%; 
     height: 100%;
+}
+
+.english {
+    margin-bottom: 8px;
 }
 </style>

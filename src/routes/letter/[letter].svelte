@@ -21,7 +21,7 @@ export async function load({ params }) {
         back_url = "/group/2"
     } else if (['g', 'o', 'u', 'l', 'f', 'b'].indexOf(letter) > -1) {
         back_url = "/group/3"
-    } else if (['j', 'z', 'w', 'v', 'y', 'x'].indexOf(letter) > -1) {
+    } else if (['j', 'q', 'z', 'w', 'v', 'y', 'x'].indexOf(letter) > -1) {
         back_url = "/group/4"
     } else {
         back_url = "/alphabet" 

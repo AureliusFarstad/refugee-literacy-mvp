@@ -175,17 +175,19 @@ function audioEnded() {
 
 .circle {
     position: absolute;
+
     top: 8px;
     left: 12px;
     height: 44px;
     width: 44px;
+
     text-align: center;
     font-size: 32px;
     font-family: sans-serif;
     line-height: 40px;
-    color: grey;
-    border: 2px solid grey;
-    border-radius: 50%;
+    color: black;
+    border: 2px solid black;
+    border-radius: 12px;
     z-index: 1;
 }
 </style>
