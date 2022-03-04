@@ -22,13 +22,17 @@ import { group_outros } from "svelte/internal";
         <LearnerText key={"letters"}></LearnerText>
     </div>
 
-    <a class="s button" href="/letter/s"><White><div class="letter">s</div></White></a>
-    <a class="a button" href="/letter/a"><White><div class="letter">a</div></White></a>
-    <a class="t button" href="/letter/t"><White><div class="letter">t</div></White></a>
 
-    <a class="p button" href="/letter/p"><White><div class="letter">p</div></White></a>
-    <a class="i button" href="/letter/i"><White><div class="letter">i</div></White></a>
-    <a class="n button" href="/letter/n"><White><div class="letter">n</div></White></a>
+    <div class="row-1">
+        <a class="s button" href="/letter/s"><White><div class="letter">s</div></White></a>
+        <a class="a button" href="/letter/a"><White><div class="letter">a</div></White></a>
+        <a class="t button" href="/letter/t"><White><div class="letter">t</div></White></a>
+    </div>
+    <div class="row-2">
+        <a class="p button" href="/letter/p"><White><div class="letter">p</div></White></a>
+        <a class="i button" href="/letter/i"><White><div class="letter">i</div></White></a>
+        <a class="n button" href="/letter/n"><White><div class="letter">n</div></White></a>
+    </div>
 
 
     <div class="practice-the-sounds">
@@ -55,74 +59,80 @@ import { group_outros } from "svelte/internal";
 </div>
 
 <style>
-    .outer-grid { 
-        display: grid;
-        margin: 10px 15px 20px;
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 50px 84px 27vw 27vw 84px 33vw 84px 33vw;
-        grid-row-gap: 22px;
-        /* grid-column-gap: 10px; */
-        place-items: center;
-    }
+.outer-grid { 
+    display: grid;
 
-    .back-button {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        height: 100%;
-        width: 100%;
-    }
-    
-    .illustration {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+    grid-template-rows: 50px 84px 21vw 21vw 84px 33vw 84px 33vw;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-row-gap: 22px;
 
-    .arrow {
-        position: absolute;   
-        height: 110%;
-    }
- 
-    .learn-the-letters {
-        width: auto;
-        grid-row: 2 / 3;
-        grid-column: 1 / 4;   
-    }
+    place-items: center;
 
-    .button {
-        width: 27vw;
-        height: 27vw;
-    }
-    .letter {
-        font-size: 13vw;
-    }
+    padding: 10px 10px 20px;
+}
 
-    .s {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-    }
-    .a {
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-    }
-    .t {
-        grid-row: 3 / 4;
-        grid-column: 3 / 4;
-    }
+.back-button {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 100%;
+}
 
-    .p {
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
-    }
-    .i {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-    }
-    .n {
-        grid-row: 4 / 5;
-        grid-column: 3 / 4;
-    }
+.illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;   
+    height: 110%;
+}
+
+.learn-the-letters {
+    width: auto;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;   
+}
+
+.button {
+    width: 20vw;
+    height: 20vw;
+}
+
+.letter {
+    font-size: 13vw;
+    position: relative; 
+    top: -2px;
+}
+
+
+.row-1 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+
+    width: 100%;
+    height: 100%;
+}
+
+.row-2 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+
+    width: 100%;
+    height: 100%;
+}
 
     .practice-the-sounds {
         grid-row: 5 / 6;

@@ -35,13 +35,20 @@ function audioEnded() {
             ><track kind="captions" /></audio>
         </div>
         <a class="group-1" href="group/1">
+            <div class="circle">1</div>
             <White>s a t p i n</White>
         </a>
         <a class="group-2" href="group/2">
+            <div class="circle">2</div>
             <White>c k e h r m d</White>
         </a>
         <a class="group-3" href="group/3">
+            <div class="circle">3</div>
             <White>g o u l f b</White>
+        </a>
+        <a class="group-4" href="group/4">
+            <div class="circle">4</div>
+            <White>j q v w x y z</White>
         </a>
 
     </div>
@@ -131,6 +138,8 @@ function audioEnded() {
 }
 
 .group-1 {
+    position: relative;
+
     grid-row: 3 / 4;
     grid-column: 1 / 4;
 
@@ -138,6 +147,8 @@ function audioEnded() {
 }
 
 .group-2 {
+    position: relative;
+
     grid-row: 4 / 5;
     grid-column: 1 / 4;
 
@@ -145,9 +156,38 @@ function audioEnded() {
 }
 
 .group-3 {
+    position: relative;
+
     grid-row: 5 / 6;
     grid-column: 1 / 4;
 
     width: 100%;
+}
+
+.group-4 {
+    position: relative;
+
+    grid-row: 6 / 7;
+    grid-column: 1 / 4;
+
+    width: 100%;
+}
+
+.circle {
+    position: absolute;
+
+    top: 8px;
+    left: 12px;
+    height: 44px;
+    width: 44px;
+
+    text-align: center;
+    font-size: 32px;
+    font-family: sans-serif;
+    line-height: 40px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 12px;
+    z-index: 1;
 }
 </style>

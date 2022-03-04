@@ -6,7 +6,6 @@
     if (uppercase) {
         svgSrc = `/alphabet/uppercase/${letter}.svg`
     }
-    console.log(svgSrc)
 
     let svgEl
 
@@ -16,7 +15,6 @@
     export function animate(){
         let svg = svgEl.getSVGDocument();
         var paths = svg.querySelectorAll('path');//, length, timer;
-        console.log(paths)
 
         var pathCount = paths.length
         var pathLengths = Array(pathCount)

@@ -10,7 +10,7 @@
 </script>
 
 <script>
-import White from "$lib/components/buttons/styles/white_button.svelte";
+import WhiteBtn from "$lib/components/buttons/styles/white_button.svelte";
 import EnglishText from "$lib/components/english_text.svelte";
 import LearnerText from "$lib/components/learner_text.svelte";
 import SoundSpeaker from "$lib/components/buttons/sound_speaker.svelte"
@@ -79,7 +79,7 @@ function press(letter, i) {
 
 <div class="outer-grid"> 
     <a href="/group/{group}" class="back-button">
-        <White><div class="illustration"><img class="arrow" src="/images/icons/arrow_backward.svg" alt="arrow"></div></White>
+        <WhiteBtn><div class="illustration"><img class="arrow" src="/images/icons/arrow_backward.svg" alt="arrow"></div></WhiteBtn>
     </a>
     <div class="learn-the-letters">
         {#if noise == "sound"}

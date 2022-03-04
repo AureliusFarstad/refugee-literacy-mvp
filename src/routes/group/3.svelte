@@ -22,13 +22,16 @@ import { group_outros } from "svelte/internal";
         <LearnerText key={"letters"}></LearnerText>
     </div>
 
-    <a class="g button" href="/letter/g"><White><div class="letter">g</div></White></a>
-    <a class="o button" href="/letter/o"><White><div class="letter">o</div></White></a>
-    <a class="u button" href="/letter/u"><White><div class="letter">u</div></White></a>
-
-    <a class="l button" href="/letter/l"><White><div class="letter">l</div></White></a>
-    <a class="f button" href="/letter/f"><White><div class="letter">f</div></White></a>
-    <a class="b button" href="/letter/b"><White><div class="letter">b</div></White></a>
+    <div class="row-1">
+        <a class="g button" href="/letter/g"><White><div class="letter">g</div></White></a>
+        <a class="o button" href="/letter/o"><White><div class="letter">o</div></White></a>
+        <a class="u button" href="/letter/u"><White><div class="letter">u</div></White></a>
+    </div>
+    <div class="row-2">
+        <a class="l button" href="/letter/l"><White><div class="letter">l</div></White></a>
+        <a class="f button" href="/letter/f"><White><div class="letter">f</div></White></a>
+        <a class="b button" href="/letter/b"><White><div class="letter">b</div></White></a>
+    </div>
 
 
     <div class="practice-the-sounds">
@@ -55,103 +58,108 @@ import { group_outros } from "svelte/internal";
 </div>
 
 <style>
-    .outer-grid { 
-        display: grid;
-        padding: 0px 15px;
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-rows: 50px 84px 27vw 27vw 84px 33vw 84px 33vw;
-        grid-row-gap: 22px;
-        place-items: center;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
+.outer-grid { 
+    display: grid;
 
-    .back-button {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        height: 100%;
-        width: 100%;
-    }
-    
-    .illustration {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+    grid-template-rows: 50px 84px 21vw 21vw 84px 33vw 84px 33vw;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-row-gap: 22px;
 
-    .arrow {
-        position: absolute;   
-        height: 110%;
-    }
- 
-    .learn-the-letters {
-        width: auto;
-        grid-row: 2 / 3;
-        grid-column: 1 / 4;   
-    }
+    place-items: center;
 
-    .button {
-        width: 27vw;
-        height: 27vw;
-    }
-    .letter {
-        font-size: 13vw;
-    }
+    padding: 10px 10px 20px;
+}
 
-    .g {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-    }
-    .o {
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-    }
-    .u {
-        grid-row: 3 / 4;
-        grid-column: 3 / 4;
-    }
+.back-button {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 100%;
+}
 
-    .l {
-        grid-row: 4 / 5;
-        grid-column: 1 / 2;
-    }
-    .f {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-    }
-    .b {
-        grid-row: 4 / 5;
-        grid-column: 3 / 4;
-    }
+.illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 
-    .practice-the-sounds {
-        grid-row: 5 / 6;
-        grid-column: 1 / 4;     
-        width: auto; 
-    }
+.arrow {
+    position: absolute;   
+    height: 110%;
+}
 
-    .sound-test {
-        grid-row: 6 / 7;
-        grid-column: 1 / 4;  
-        height: 100%;
-        width: 80%; 
-    }
+.learn-the-letters {
+    width: auto;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;   
+}
 
-    .practice-the-names {
-        grid-row: 7 / 8;
-        grid-column: 1 / 4;  
-        width: auto; 
-    }
+.button {
+    width: 20vw;
+    height: 20vw;
+}
 
-    .english {
-        margin-bottom: 8px;
-    }
+.letter {
+    font-size: 13vw;
+    position: relative; 
+    top: -2px;
+}
 
-    .name-test {
-        grid-row: 8 / 9;
-        grid-column: 1 / 4;  
-        height: 100%;
-        width: 80%; 
-    }
-    </style>
+
+.row-1 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+
+    width: 100%;
+    height: 100%;
+}
+
+.row-2 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+
+    width: 100%;
+    height: 100%;
+}
+
+.practice-the-sounds {
+    grid-row: 5 / 6;
+    grid-column: 1 / 4;     
+    width: auto; 
+}
+
+.sound-test {
+    grid-row: 6 / 7;
+    grid-column: 1 / 4;  
+    height: 100%;
+    width: 80%; 
+}
+
+.practice-the-names {
+    grid-row: 7 / 8;
+    grid-column: 1 / 4;  
+    width: auto; 
+}
+
+.english {
+    margin-bottom: 8px;
+}
+
+.name-test {
+    grid-row: 8 / 9;
+    grid-column: 1 / 4;  
+    height: 100%;
+    width: 80%; 
+}
+</style>
