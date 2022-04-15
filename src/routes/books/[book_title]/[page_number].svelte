@@ -110,7 +110,7 @@
 .image-container {
     overflow: hidden;
 
-    max-height: 50vh;
+    max-height: 45vh;
 }
 
 .image {
@@ -119,7 +119,7 @@
 }
 
 .text {
-    margin: 0 2px 4px;
+    margin: 0 8px 8px;
 
     font-size: 32px;
     line-height: 36px;
