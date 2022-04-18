@@ -11,6 +11,9 @@ import Book from "$lib/components/book.svelte"
         <a href="books/hadiya_at_the_market/1" class="hadiya-book">
             <Book title={"Hadiya at the market"} cover_image={"/books/hadiya_at_the_market/1.jpeg"} />
         </a>
+        <a href="books/amin_and_the_plumber/1" class="amin-book">
+            <Book title={"Amin and the plumber"} cover_image={"/books/amin_and_the_plumber/16.jpeg"} />
+        </a>
     </div>
 </body>
 
@@ -21,7 +24,7 @@ import Book from "$lib/components/book.svelte"
     padding: 0px 15px;
     padding-top: 10px;
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 50px auto;
+    grid-template-rows: 50px auto auto 10px;
     row-gap: 22px;
 }
 .back-button {
@@ -44,5 +47,10 @@ import Book from "$lib/components/book.svelte"
 .hadiya-book {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
+}
+
+.amin-book {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;  
 }
 </style>

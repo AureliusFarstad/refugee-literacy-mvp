@@ -38,8 +38,8 @@ export let cover_image;
     position: absolute;
     width: 80%;
     left: 45px;
-    bottom: 120px;
-    font-size: 32px;
+    bottom: 80px;
+    font-size: 30px;
     font-family: 'Patrick Hand';
   }
   .pages{

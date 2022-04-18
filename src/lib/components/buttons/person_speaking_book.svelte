@@ -14,6 +14,8 @@ function pressSound() {
 function audioEnded() {
     active = false
 }
+
+$: page_number && audioEnded()
 </script>
 
 <div class="btn" class:active="{active}" on:click={pressSound}>            
