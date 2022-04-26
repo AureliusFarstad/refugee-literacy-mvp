@@ -4,6 +4,8 @@ import LearnerText from "$lib/components/learner_text.svelte";
 import WhiteBtn from '$lib/components/buttons/styles/white_button.svelte'
 import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
 import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
+
+// Group 2: c, k, d, e, h, r, m
 </script>
 
 <div class="outer-grid">
@@ -31,18 +33,6 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <a class="m button" href="/letter/m"><WhiteBtn><div class="letter">m</div></WhiteBtn></a>
     </div>
 
-
-    <!-- <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
-    <a class="d button" href="/letter/d"><WhiteBtn><div class="letter">d</div></WhiteBtn></a>
-    <a class="e button" href="/letter/e"><WhiteBtn><div class="letter">e</div></WhiteBtn></a>
-    <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a> -->
-
-    <!-- <div class="row-1">
-        <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
-        <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
-    </div> -->
-
-
     <div class="practice-the-sounds">
         <div class="english">
             <EnglishText key={"pract_sound"}/>
@@ -50,7 +40,7 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <LearnerText key={"pract_sound"}/>
     </div>
 
-    <a class="sound-test" href="/practice/sound-group-2">
+    <a class="sound-test" href="/alphabet/group-2-sound-quiz">
         <SoundQuiz/>
     </a>
 
@@ -61,7 +51,7 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <LearnerText key={"pract_name"}/>
     </div>
 
-    <a class="name-test" href="/practice/name-group-2">
+    <a class="name-test" href="/alphabet/group-2-sound-quiz">
         <NameQuiz/>
     </a>
 </div>

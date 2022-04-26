@@ -1,13 +1,34 @@
 <script>
-    export let active_green = false;
-    export let active_red = false;
-    export let green = false;
+    export let letter;
+    export let guessed_option;
+    export let correct_option;
+
+    let active_green;
+    let active_red;
+    let green;
+
+    $: if (guessed_option != "") {
+        if (letter == guessed_option && letter == correct_option) {
+            active_green = true;
+        } else if (letter == guessed_option && letter != correct_option) {
+            active_red = true;
+        } else if (letter != guessed_option && letter == correct_option) {
+            green = true;    
+        }
+    } else {
+        active_green = false;
+        active_red = false;
+        green = false;
+    }
 </script>
 
-<div class="btn" class:green="{green}" class:active-red="{active_red}" class:active-green="{active_green}"><slot></slot></div>
+<div class="container" class:green="{green}" class:active-red="{active_red}" class:active-green="{active_green}">
+{letter}
+</div>
+
 
 <style>
-.btn {
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,16 +49,12 @@
 
     font-family: 'Patrick Hand';
 
-    text-indent:0;
-    display:inline-block;
+    text-indent: 0;
     color:#000004;
     
-    font-size:  30px;
+    font-size:  45px;
 
-
-    /* transition: top 0.4s ease-out; */
     transition: all 0.6s ease-out;
-
 }
 
 @keyframes show-correct {

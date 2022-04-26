@@ -1,14 +1,11 @@
 <script>
-    import { t, locale, locales } from "$lib/data/stores/i18n";
+import EnglishText from "$lib/components/english_text.svelte";
+import LearnerText from "$lib/components/learner_text.svelte";
+import White from '$lib/components/buttons/styles/white_button.svelte'
+import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
+import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
-    import EnglishText from "$lib/components/english_text.svelte";
-    import LearnerText from "$lib/components/learner_text.svelte";
-    import White from '$lib/components/buttons/styles/white_button.svelte'
-    import SvgLetter from "$lib/components/svg_letter.svelte";
-    import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
-    import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
-
-import { group_outros } from "svelte/internal";
+// Group 1: s, a, t, p, i, n
 </script>
 
 <div class="outer-grid">
@@ -42,7 +39,7 @@ import { group_outros } from "svelte/internal";
         <LearnerText key={"pract_sound"}></LearnerText>
     </div>
 
-    <a class="sound-test" href="/practice/sound-group-1">
+    <a class="sound-test" href="/alphabet/group-1-sound-quiz">
         <SoundQuiz/>
     </a>
 
@@ -53,7 +50,7 @@ import { group_outros } from "svelte/internal";
         <LearnerText key={"pract_name"}></LearnerText>
     </div>
 
-    <a class="name-test" href="/practice/name-group-1">
+    <a class="name-test" href="/alphabet/group-1-name-quiz">
         <NameQuiz/>
     </a>
 </div>
@@ -134,33 +131,33 @@ import { group_outros } from "svelte/internal";
     height: 100%;
 }
 
-    .practice-the-sounds {
-        grid-row: 5 / 6;
-        grid-column: 1 / 4;     
-        width: auto; 
-    }
+.practice-the-sounds {
+    grid-row: 5 / 6;
+    grid-column: 1 / 4;     
+    width: auto; 
+}
 
-    .sound-test {
-        grid-row: 6 / 7;
-        grid-column: 1 / 4;  
-        height: 100%;
-        width: 80%; 
-    }
+.sound-test {
+    grid-row: 6 / 7;
+    grid-column: 1 / 4;  
+    height: 100%;
+    width: 80%; 
+}
 
-    .practice-the-names {
-        grid-row: 7 / 8;
-        grid-column: 1 / 4;  
-        width: auto; 
-    }
+.practice-the-names {
+    grid-row: 7 / 8;
+    grid-column: 1 / 4;  
+    width: auto; 
+}
 
-    .english {
-        margin-bottom: 8px;
-    }
+.english {
+    margin-bottom: 8px;
+}
 
-    .name-test {
-        grid-row: 8 / 9;
-        grid-column: 1 / 4;  
-        height: 100%;
-        width: 80%; 
-    }
-    </style>
+.name-test {
+    grid-row: 8 / 9;
+    grid-column: 1 / 4;  
+    height: 100%;
+    width: 80%; 
+}
+</style>

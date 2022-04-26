@@ -7,13 +7,13 @@
     export let key = "";
 </script>
 
-{#if sound}
 <div class="right-to-left">
     <div dir="rtl" class="text">{$t(key)}</div>
+    {#if sound}
     <div class="spacer"></div>
     <div class="sound-button"><PersonSpeaking {key}></PersonSpeaking></div>
+    {/if}
 </div>
-{/if}
 <style>
 .right-to-left {
     margin: 2px 0px;

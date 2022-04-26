@@ -1,6 +1,5 @@
 <script>
-    export let active = false;
-
+export let active = false;
 </script>
 
 <div class="btn" class:active="{active}"><slot></slot></div>
@@ -28,7 +27,6 @@
     border-radius: 50%;
 
     text-indent:0;
-    /* border:1px solid #3B7A57; */
     display:inline-block;
     color:#000004;
     

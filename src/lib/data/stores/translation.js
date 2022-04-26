@@ -19,6 +19,8 @@ export default {
         "pract_sound": "Practice the sounds.",
         "pract_name": "Practice the names.",
 
+        "listen": "1. Listen",
+        "select": "2. Select",
         "match_sound": "Listen to the sound \n and select the \nletter.",
         "match_name": "Listen to the name \n and select the \nletter.",
 
@@ -45,6 +47,8 @@ export default {
         "pract_sound": "صداها را تمرین کنید",
         "pract_name": "نامها را تمرین کنید",
 
+        "listen": "۱. گوش بده",
+        "select": "۲. انتخاب کن",
         "match_sound": "به صدا گوش بده و \nیکی از حروف را \nانتخاب کن",
         "match_name": "به اسم گوش بده و \nیکی از حروف را \nانتخاب کن",
 
