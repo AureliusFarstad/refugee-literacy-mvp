@@ -58,6 +58,7 @@
 
 <style>
 .outer-grid { 
+    position: fixed;
     place-items: center;
 
     display: grid;
@@ -70,6 +71,10 @@
 }
 
 .back-button {
+    /* Fixes firefox bug where grid blows out.
+    https://css-tricks.com/preventing-a-grid-blowout/ */
+    min-width: 0; 
+
     grid-row: 1 / 2;
     grid-column: 1 / 2;
 
