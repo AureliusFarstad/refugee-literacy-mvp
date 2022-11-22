@@ -49,7 +49,7 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <LearnerText key={"pract_name"}></LearnerText>
     </div>
 
-    <a class="name-test" href="/alphabet/group-3-sound-quiz">
+    <a class="name-test" href="/alphabet/group-3-name-quiz">
         <NameQuiz/>
     </a>
 </div>
