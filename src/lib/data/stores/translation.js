@@ -88,6 +88,8 @@ export default {
         "alphabet": "تعلم \nالابجديه",
         "letters": "تعلم الأحرف",
 
+        "book": "اقرأ كتب بسيطه",
+
         "sound": "الصوت",
         "name": "الاسم",
         "example": "مثال",

@@ -1,11 +1,3 @@
-<script context="module">
-export async function load({ params }) {
-    let letter = params.letter
-
-    return { props: {letter} }
-}
-</script>
-
 <script>
     import Card from "$lib/components/card.svelte"
     import Sound from "$lib/components/buttons/letter/sound.svelte"
@@ -13,7 +5,9 @@ export async function load({ params }) {
     import Name from "$lib/components/buttons/letter/name.svelte"
     import PersonSpeaking from "$lib/components/buttons/person_speaking.svelte"
 
-    export let letter
+    export let data
+    $: letter = data.letter
+
     let back_url
     if (['s', 'a', 't', 'p', 'i', 'n'].indexOf(letter) > -1) {
         back_url = "/group/1"
@@ -49,8 +43,8 @@ export async function load({ params }) {
     grid-column-gap: 10px;
 
     padding: 10px 12px 20px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .back-button {

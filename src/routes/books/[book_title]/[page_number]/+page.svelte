@@ -1,24 +1,14 @@
-<script context="module">
-    export async function load({ params }) {
-        let book_title = params.book_title
-        let page_number = params.page_number
-        return { props: {
-            book_title: book_title,
-            page_number: page_number
-        }}
-    }
-</script>
-
 <script>
     import books from "$lib/data/books.json"
     import PersonSpeakingBook from "$lib/components/buttons/person_speaking_book.svelte";
     import White from '$lib/components/buttons/styles/white_button.svelte'
 
-    export let book_title
-    export let page_number
+    export let data
+    $: page_number = data.page_number
+    $: book_title = data.book_title
+
     $: next_page = parseInt(page_number) + 1
     $: last_page = parseInt(page_number) - 1
-
     $: image_source = ['/books/', book_title, '/', page_number, '.jpeg'].join('')
     $: text = books[ book_title ][ page_number-1 ]
 
@@ -66,7 +56,8 @@
     grid-template-columns: 1fr 1fr 1fr; 
     row-gap: 22px;
 
-    height: calc(100vh - 15px);
+    height: 100%;
+    width: 100%;
     padding: 10px 15px 5px;
 }
 
@@ -149,6 +140,9 @@
     grid-row: 4 / 5;
     grid-column: 1 / 2;
 
+    position: relative;
+    bottom: 15px;
+
     width: 80%;
     height: 100%;
 }
@@ -157,6 +151,9 @@
     grid-row: 4 / 5;
     grid-column: 3 / 4;
     float: right;
+
+    position: relative;
+    bottom: 15px;
 
     width: 80%;
     height: 100%;

@@ -1,14 +1,3 @@
-<script context="module">
-export async function load({ params }) {
-    let noise = params.noise
-    let group = params.group
-    return { props: {
-        noise: noise,
-        group: group
-    }}
-}
-</script>
-
 <script>
 import { fade } from 'svelte/transition';
 
@@ -22,8 +11,8 @@ import WhiteBtn from "$lib/components/buttons/styles/white_button.svelte";
 import GreenBtn from '$lib/components/buttons/styles/green_button.svelte';
 import GuessableLetter from '$lib/components/buttons/guessable_letter.svelte';
 
-export let noise;
-export let group;
+export let data;
+let {noise, group} = data;
 
 // HTML Element Bindings
 let speakerButton;
@@ -37,7 +26,7 @@ let speaker_played = false;
 let point_out_speaker = false;
 
 // Quiz Data
-let possible_sets = QUIZ_DATA[group.toString()]
+let possible_sets = QUIZ_DATA[group]
 var set_of_options, correct_option, guessed_option
 
 function selectRandom(array) {
@@ -168,11 +157,12 @@ function guess(option) {
     display: grid;
     padding: 10px 12px 18px;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 50px 24px 50px 12px 75vw;
+    grid-template-rows: 50px 24px 50px 12px 75%;
 
     place-items: center;
 
-    width: 100vw;
+    width: 100%;
+    max-width: inherit;
     height: auto;
 }
 
@@ -243,8 +233,8 @@ function guess(option) {
     grid-row: 5 / 6;
     grid-column: 1 / 4;
 
-    width: 75vw;
-    height: 75vw;
+    width: 240px;
+    height: 240px;
 }
 
 @keyframes XAxisFlip {
@@ -294,11 +284,12 @@ function guess(option) {
     display: grid;
     padding: 10px 12px 18px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 50px 12px 30vw 24px;
+    grid-template-rows: 50px 12px 100px 12px;
 
     place-items: center;
 
-    width: 100vw;
+    width: 100%;
+    max-width: inherit;
     height: auto;
 }
 

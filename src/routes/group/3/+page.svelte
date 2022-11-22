@@ -1,17 +1,16 @@
 <script>
 import EnglishText from "$lib/components/english_text.svelte";
 import LearnerText from "$lib/components/learner_text.svelte";
-import WhiteBtn from '$lib/components/buttons/styles/white_button.svelte'
+import White from '$lib/components/buttons/styles/white_button.svelte'
 import NameQuiz from '$lib/components/buttons/group/name_quiz.svelte'
 import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
-// Group 2: c, k, d, e, h, r, m
+// Group 4: g, o, u, l, f, b
 </script>
 
 <div class="outer-grid">
     <a href="/alphabet" class="back-button">
-        <WhiteBtn>
-            <div class="illustration"><img class="arrow" src="/images/icons/arrow_backward.svg" alt="arrow"></div></WhiteBtn>
+        <White><div class="illustration"><img class="arrow" src="/images/icons/arrow_backward.svg" alt="arrow"></div></White>
     </a>
     <div class="learn-the-letters">
         <div class="english">
@@ -21,49 +20,49 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     </div>
 
     <div class="row-1">
-        <a class="c button" href="/letter/c"><WhiteBtn><div class="letter">c</div></WhiteBtn></a>
-        <a class="k button" href="/letter/k"><WhiteBtn><div class="letter">k</div></WhiteBtn></a>
-        <a class="d button" href="/letter/d"><WhiteBtn><div class="letter">d</div></WhiteBtn></a>
-        <a class="e button" href="/letter/e"><WhiteBtn><div class="letter">e</div></WhiteBtn></a>
+        <a class="g button" href="/letter/g"><White><div class="letter">g</div></White></a>
+        <a class="o button" href="/letter/o"><White><div class="letter">o</div></White></a>
+        <a class="u button" href="/letter/u"><White><div class="letter">u</div></White></a>
+    </div>
+    <div class="row-2">
+        <a class="l button" href="/letter/l"><White><div class="letter">l</div></White></a>
+        <a class="f button" href="/letter/f"><White><div class="letter">f</div></White></a>
+        <a class="b button" href="/letter/b"><White><div class="letter">b</div></White></a>
     </div>
 
-    <div class="row-2">
-        <a class="h button" href="/letter/h"><WhiteBtn><div class="letter">h</div></WhiteBtn></a>
-        <a class="r button" href="/letter/r"><WhiteBtn><div class="letter">r</div></WhiteBtn></a>
-        <a class="m button" href="/letter/m"><WhiteBtn><div class="letter">m</div></WhiteBtn></a>
-    </div>
 
     <div class="practice-the-sounds">
         <div class="english">
-            <EnglishText key={"pract_sound"}/>
+            <EnglishText key={"pract_sound"}></EnglishText>
         </div>
-        <LearnerText key={"pract_sound"}/>
+        <LearnerText key={"pract_sound"}></LearnerText>
     </div>
 
-    <a class="sound-test" href="/alphabet/group-2-sound-quiz">
+    <a class="sound-test" href="/alphabet/group-3-sound-quiz">
         <SoundQuiz/>
     </a>
 
     <div class="practice-the-names">
         <div class="english">
-            <EnglishText key={"pract_name"}/>
+            <EnglishText key={"pract_name"}></EnglishText>
         </div>
-        <LearnerText key={"pract_name"}/>
+        <LearnerText key={"pract_name"}></LearnerText>
     </div>
 
-    <a class="name-test" href="/alphabet/group-2-sound-quiz">
+    <a class="name-test" href="/alphabet/group-3-name-quiz">
         <NameQuiz/>
     </a>
 </div>
 
 <style>
-.outer-grid {
-    place-items: center;
-
+.outer-grid { 
     display: grid;
+
     grid-template-rows: 50px 84px 21vw 21vw 84px 33vw 84px 33vw;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; 
     grid-row-gap: 22px;
+
+    place-items: center;
 
     padding: 10px 10px 20px;
 }
@@ -71,33 +70,26 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 .back-button {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-
-    width: 100%;
     height: 100%;
-
-    /* padding-left: 10px; */
+    width: 100%;
 }
 
 .illustration {
+    display: flex;
     align-items: center;
     justify-content: center;
-
-    display: flex;
-
     height: 100%;
 }
 
 .arrow {
     position: absolute;   
-
     height: 110%;
 }
 
 .learn-the-letters {
+    width: auto;
     grid-row: 2 / 3;
     grid-column: 1 / 4;   
-
-    width: auto;
 }
 
 .button {
@@ -107,7 +99,10 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
 .letter {
     font-size: 13vw;
+    position: relative; 
+    top: -2px;
 }
+
 
 .row-1 {
     grid-row: 3 / 4;
@@ -137,35 +132,31 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
 .practice-the-sounds {
     grid-row: 5 / 6;
-    grid-column: 1 / 4;    
-
+    grid-column: 1 / 4;     
     width: auto; 
 }
 
 .sound-test {
     grid-row: 6 / 7;
-    grid-column: 1 / 4; 
-
-    width: 80%; 
+    grid-column: 1 / 4;  
     height: 100%;
+    width: 80%; 
 }
 
 .practice-the-names {
     grid-row: 7 / 8;
-    grid-column: 1 / 4; 
-        
+    grid-column: 1 / 4;  
     width: auto; 
+}
+
+.english {
+    margin-bottom: 8px;
 }
 
 .name-test {
     grid-row: 8 / 9;
     grid-column: 1 / 4;  
-
-    width: 80%; 
     height: 100%;
-}
-
-.english {
-    margin-bottom: 8px;
+    width: 80%; 
 }
 </style>
