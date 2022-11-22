@@ -40,7 +40,7 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <LearnerText key={"pract_sound"}/>
     </div>
 
-    <a class="sound-test" href="/practice/sound-group-4">
+    <a class="sound-test" href="/alphabet/group-4-sound-quiz">
         <SoundQuiz/>
     </a>
 
@@ -51,7 +51,7 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
         <LearnerText key={"pract_name"}/>
     </div>
 
-    <a class="name-test" href="/practice/name-group-4">
+    <a class="name-test" href="/alphabet/group-4-sound-quiz">
         <NameQuiz/>
     </a>
 </div>

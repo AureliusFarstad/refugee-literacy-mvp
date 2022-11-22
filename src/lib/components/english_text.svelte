@@ -7,13 +7,13 @@
     export let key = "";
 </script>
 
-{#if sound}
 <div class="left-to-right">
     <div class="text">{en(key)}</div>
+    {#if sound}
     <div class="spacer"></div>
     <div class="sound-button"><PersonSpeaking {key} eng={true}></PersonSpeaking></div>
+    {/if}
 </div>
-{/if}
 <style>
 
 .left-to-right {
