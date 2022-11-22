@@ -1,6 +1,6 @@
 // source: https://svelte.dev/repl/de39de663ef2445b8fe17b79c500013b?version=3.33.0
 // source: https://www.youtube.com/watch?v=jOOrWeYfmlQ
-import { browser } from "$app/env";
+import { browser } from "$app/environment";
 import { derived, writable } from "svelte/store";
 import translations from "./translation";
 

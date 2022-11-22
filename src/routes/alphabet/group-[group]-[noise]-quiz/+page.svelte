@@ -1,14 +1,3 @@
-<script context="module">
-export async function load({ params }) {
-    let noise = params.noise
-    let group = params.group
-    return { props: {
-        noise: noise,
-        group: group
-    }}
-}
-</script>
-
 <script>
 import { fade } from 'svelte/transition';
 
@@ -22,8 +11,8 @@ import WhiteBtn from "$lib/components/buttons/styles/white_button.svelte";
 import GreenBtn from '$lib/components/buttons/styles/green_button.svelte';
 import GuessableLetter from '$lib/components/buttons/guessable_letter.svelte';
 
-export let noise;
-export let group;
+export let data;
+let {noise, group} = data;
 
 // HTML Element Bindings
 let speakerButton;
@@ -37,7 +26,7 @@ let speaker_played = false;
 let point_out_speaker = false;
 
 // Quiz Data
-let possible_sets = QUIZ_DATA[group.toString()]
+let possible_sets = QUIZ_DATA[group]
 var set_of_options, correct_option, guessed_option
 
 function selectRandom(array) {
