@@ -157,11 +157,12 @@ function guess(option) {
     display: grid;
     padding: 10px 12px 18px;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 50px 24px 50px 12px 75vw;
+    grid-template-rows: 50px 24px 50px 12px 75%;
 
     place-items: center;
 
-    width: 100vw;
+    width: 100%;
+    max-width: inherit;
     height: auto;
 }
 
@@ -232,8 +233,8 @@ function guess(option) {
     grid-row: 5 / 6;
     grid-column: 1 / 4;
 
-    width: 75vw;
-    height: 75vw;
+    width: 240px;
+    height: 240px;
 }
 
 @keyframes XAxisFlip {
@@ -283,11 +284,12 @@ function guess(option) {
     display: grid;
     padding: 10px 12px 18px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 50px 12px 30vw 24px;
+    grid-template-rows: 50px 12px 100px 12px;
 
     place-items: center;
 
-    width: 100vw;
+    width: 100%;
+    max-width: inherit;
     height: auto;
 }
 

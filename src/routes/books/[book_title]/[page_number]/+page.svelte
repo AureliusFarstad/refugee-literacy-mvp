@@ -56,7 +56,8 @@
     grid-template-columns: 1fr 1fr 1fr; 
     row-gap: 22px;
 
-    height: calc(100vh - 15px);
+    height: 100%;
+    width: 100%;
     padding: 10px 15px 5px;
 }
 
@@ -139,6 +140,9 @@
     grid-row: 4 / 5;
     grid-column: 1 / 2;
 
+    position: relative;
+    bottom: 15px;
+
     width: 80%;
     height: 100%;
 }
@@ -147,6 +151,9 @@
     grid-row: 4 / 5;
     grid-column: 3 / 4;
     float: right;
+
+    position: relative;
+    bottom: 15px;
 
     width: 80%;
     height: 100%;
