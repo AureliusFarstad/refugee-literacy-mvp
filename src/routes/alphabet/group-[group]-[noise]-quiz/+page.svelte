@@ -219,12 +219,12 @@ function guess(option) {
 }
 
 .point-out-speaker {
-    grid-row: 4 / 5;
+    grid-row: 5 / 6;
     grid-column: 1 / 7;
 
     position: relative;
     left: 20px;
-    bottom: 17px;
+    bottom: min(100%, 144px);
 
     transform: scale(1.4);
 }
