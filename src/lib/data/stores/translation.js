@@ -75,6 +75,8 @@ export default {
         "pract_sound": "تدرب على الصوت",
         "pract_name": "تدرب على الاسم",
 
+        "listen": "۱. استمع",
+        "select": "۲. يختار",
         "match_sound": "استمع الى الصوت \nواختر الحرف",
         "match_name": "استمع الى الصوت \nواختر الاسم",
 
@@ -101,6 +103,8 @@ export default {
         "pract_sound": "تدرب على الصوت",
         "pract_name": "تدرب على الاسم",
 
+        "listen": "۱. استمع",
+        "select": "۲. يختار",
         "match_sound": "استمع الى الصوت \nواختر الحرف",
         "match_name": "استمع الى الصوت \nواختر الاسم",
 
