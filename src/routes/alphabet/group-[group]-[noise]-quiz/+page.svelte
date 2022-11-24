@@ -86,7 +86,7 @@ function guess(option) {
 }
 </script>
 
-<div class="upper-grid"> 
+<div class="grid"> 
     <a href="/group/{group}" class="back-button">
         <WhiteBtn><div class="arrow-div"><img class="arrow" src="/images/icons/arrow_backward.svg" alt="arrow"></div></WhiteBtn>
     </a>
@@ -119,10 +119,10 @@ function guess(option) {
             </div>
         </GreenBtn>
     </div>
-</div>
+<!-- </div> -->
 
 
-<div class="lower-grid"> 
+<!-- <div class="lower-grid">  -->
     <div class="select-english"><EnglishText key={"select"} sound={false} /></div>
     <div class="select-learner"><LearnerText key={"select"} sound={false} /></div>
 
@@ -150,25 +150,25 @@ function guess(option) {
 ><track kind="captions" /></audio>
 
 <style>
-.upper-grid { 
+.grid {
     position: fixed;
     top: 0px;
 
     display: grid;
     padding: 10px 12px 18px;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 50px 24px 50px 12px 75%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 50px 12px 50px 12px 1fr 12px 50px 12px 100px 12px;
 
     place-items: center;
 
     width: 100%;
-    max-width: inherit;
-    height: auto;
+    max-width: inherit; 
+    height: 100%;
 }
 
 .back-button {
     grid-row: 1 / 2;
-    grid-column: 1 / 2;
+    grid-column: 1 / 4;   
 
     position: absolute;
     left: 0px;
@@ -194,7 +194,7 @@ function guess(option) {
 
 .help-audio-button {
     grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    grid-column: 4 / 7;   
 
     position: absolute;
     right: 10px;
@@ -202,7 +202,7 @@ function guess(option) {
 
 .listen-english {
     grid-row: 3 / 4;
-    grid-column: 1 / 2;  
+    grid-column: 1 / 4;   
 
     position: absolute;
     left: 0px;
@@ -211,7 +211,7 @@ function guess(option) {
 
 .listen-learner {
     grid-row: 3 / 4;
-    grid-column: 2 / 3;   
+    grid-column: 4 / 7;   
 
     position: absolute;
     right: 0px;
@@ -220,7 +220,7 @@ function guess(option) {
 
 .point-out-speaker {
     grid-row: 4 / 5;
-    grid-column: 1 / 4;
+    grid-column: 1 / 7;
 
     position: relative;
     left: 20px;
@@ -231,10 +231,12 @@ function guess(option) {
 
 .speaker {
     grid-row: 5 / 6;
-    grid-column: 1 / 4;
+    grid-column: 1 / 7;
 
+    height: 100%;
     width: 240px;
-    height: 240px;
+    max-width: 240px;
+    max-height: 240px;
 }
 
 @keyframes XAxisFlip {
@@ -294,7 +296,7 @@ function guess(option) {
 }
 
 .select-english {
-    grid-row: 1 / 2;
+    grid-row: 7 / 8;
     grid-column: 1 / 4;   
 
     position: absolute;
@@ -303,7 +305,7 @@ function guess(option) {
 }
 
 .select-learner {
-    grid-row: 1 / 2;
+    grid-row: 7 / 8;
     grid-column: 4 / 7;   
 
     position: absolute;
@@ -312,7 +314,7 @@ function guess(option) {
 }
 
 .letter-0 {
-    grid-row: 3 / 4;
+    grid-row: 9 / 10;
     grid-column: 1 / 3;
 
     height: 100%;
@@ -322,7 +324,7 @@ function guess(option) {
 }
 
 .letter-1 {
-    grid-row: 3 / 4;
+    grid-row: 9 / 10;
     grid-column: 3 / 5;
 
     height: 100%;
@@ -333,7 +335,7 @@ function guess(option) {
 }
 
 .letter-2 {
-    grid-row: 3 / 4;
+    grid-row: 9 / 10;
     grid-column: 5 / 7;
 
     height: 100%;
