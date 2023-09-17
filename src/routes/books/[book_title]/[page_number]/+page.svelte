@@ -58,6 +58,7 @@
 
     height: 100%;
     width: 100%;
+    max-width: 430px;
     padding: 10px 15px 5px;
 }
 
@@ -106,16 +107,20 @@
 .image-container {
     overflow: hidden;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     max-height: 45vh;
 }
 
 .image {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
 }
 
 .text {
-    margin: 0 8px 8px;
+    margin: 0 16px 8px;
 
     font-size: 32px;
     line-height: 36px;

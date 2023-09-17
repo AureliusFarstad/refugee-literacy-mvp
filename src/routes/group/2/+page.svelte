@@ -61,7 +61,7 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
     place-items: center;
 
     display: grid;
-    grid-template-rows: 50px 84px 21vw 21vw 84px 33vw 84px 33vw;
+    grid-template-rows: 50px 84px 21vw 21vw 84px 120px 84px 120px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 22px;
 
@@ -167,5 +167,25 @@ import SoundQuiz from "$lib/components/buttons/group/sound_quiz.svelte";
 
 .english {
     margin-bottom: 8px;
+}
+
+@media (min-width: 1000px) {
+    .outer-grid { 
+        display: grid;
+
+        grid-template-rows: 50px 84px 120px 120px 84px 120px 84px 120px;
+    }
+
+    .button { 
+        width: 100%;
+        height: 100%;
+    }
+
+    .letter {
+        position: relative; 
+        top: -10px;
+
+        font-size: 80px;
+    }
 }
 </style>
